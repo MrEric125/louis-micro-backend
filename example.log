@@ -1,0 +1,412 @@
+2019-09-15 21:26:36.602  INFO 31924 --- [main] d.s.b.c.e.WelcomeLogoApplicationListener : 
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2019-09-15 21:26:36.614  INFO 31924 --- [main] e.OverrideDubboConfigApplicationListener : Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-provider-sample, dubbo.application.qos-accept-foreign-ip=false, dubbo.application.qos-enable=true, dubbo.application.qos-port=22222, dubbo.config.multiple=true, dubbo.protocol.name=dubbo, dubbo.protocol.port=20880, dubbo.registry.address=zookeeper://127.0.0.1:2181, dubbo.scan.base-packages=com.louis}
+2019-09-15 21:26:37.042  INFO 31924 --- [main] com.LouisApplication                     : Starting LouisApplication on ERIC with PID 31924 (started by Eric in D:\workspace\IntelliJ Idea\source\cloudplus)
+2019-09-15 21:26:37.043  INFO 31924 --- [main] com.LouisApplication                     : No active profile set, falling back to default profiles: default
+2019-09-15 21:26:42.832  INFO 31924 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+2019-09-15 21:26:42.834  INFO 31924 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+2019-09-15 21:26:42.835  INFO 31924 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+2019-09-15 21:26:42.835  INFO 31924 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+2019-09-15 21:26:42.835  INFO 31924 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProtocolConfig#0, class : org.apache.dubbo.config.ProtocolConfig] has been registered.
+2019-09-15 21:26:42.835  INFO 31924 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProtocolConfig#0] has been registered.
+2019-09-15 21:26:43.063  INFO 31924 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-09-15 21:26:43.064  INFO 31924 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-09-15 21:26:43.695  INFO 31924 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-15 21:26:43.708  INFO 31924 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-15 21:26:43.711  INFO 31924 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-15 21:26:45.189  INFO 31924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-09-15 21:26:45.261  INFO 31924 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-15 21:26:45.262  INFO 31924 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-15 21:26:45.562  INFO 31924 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-15 21:26:45.563  INFO 31924 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8370 ms
+2019-09-15 21:26:46.789  INFO 31924 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-15 21:26:47.256  INFO 31924 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+2019-09-15 21:26:47.278  INFO 31924 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+2019-09-15 21:26:47.299  INFO 31924 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProtocolConfig#0] have been binding by prefix of configuration properties : dubbo.protocol
+2019-09-15 21:26:48.387  INFO 31924 --- [main] org.apache.curator.utils.Compatibility   : Running in ZooKeeper 3.4.x compatibility mode
+2019-09-15 21:26:48.462  INFO 31924 --- [main] o.a.c.f.imps.CuratorFrameworkImpl        : Starting
+2019-09-15 21:26:57.485  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.13-2d71af4dbe22557fda74f9a9b4309b15a7487f03, built on 06/29/2018 00:39 GMT
+2019-09-15 21:26:57.486  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=ERIC
+2019-09-15 21:26:57.486  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_221
+2019-09-15 21:26:57.486  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2019-09-15 21:26:57.486  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=D:\Program Files\java8\jdk\jre
+2019-09-15 21:26:57.486  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=D:\Program Files\java8\jdk\jre\lib\charsets.jar;D:\Program Files\java8\jdk\jre\lib\deploy.jar;D:\Program Files\java8\jdk\jre\lib\ext\access-bridge-64.jar;D:\Program Files\java8\jdk\jre\lib\ext\cldrdata.jar;D:\Program Files\java8\jdk\jre\lib\ext\dnsns.jar;D:\Program Files\java8\jdk\jre\lib\ext\jaccess.jar;D:\Program Files\java8\jdk\jre\lib\ext\jfxrt.jar;D:\Program Files\java8\jdk\jre\lib\ext\localedata.jar;D:\Program Files\java8\jdk\jre\lib\ext\nashorn.jar;D:\Program Files\java8\jdk\jre\lib\ext\sunec.jar;D:\Program Files\java8\jdk\jre\lib\ext\sunjce_provider.jar;D:\Program Files\java8\jdk\jre\lib\ext\sunmscapi.jar;D:\Program Files\java8\jdk\jre\lib\ext\sunpkcs11.jar;D:\Program Files\java8\jdk\jre\lib\ext\zipfs.jar;D:\Program Files\java8\jdk\jre\lib\javaws.jar;D:\Program Files\java8\jdk\jre\lib\jce.jar;D:\Program Files\java8\jdk\jre\lib\jfr.jar;D:\Program Files\java8\jdk\jre\lib\jfxswt.jar;D:\Program Files\java8\jdk\jre\lib\jsse.jar;D:\Program Files\java8\jdk\jre\lib\management-agent.jar;D:\Program Files\java8\jdk\jre\lib\plugin.jar;D:\Program Files\java8\jdk\jre\lib\resources.jar;D:\Program Files\java8\jdk\jre\lib\rt.jar;D:\workspace\IntelliJ Idea\source\cloudplus\provider\usm-admin-provider-service\target\classes;D:\Program Files\maven\reponsitory\org\apache\dubbo\dubbo\2.7.3\dubbo-2.7.3.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-context\5.1.9.RELEASE\spring-context-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-aop\5.1.9.RELEASE\spring-aop-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-beans\5.1.9.RELEASE\spring-beans-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-expression\5.1.9.RELEASE\spring-expression-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;D:\Program Files\maven\reponsitory\io\netty\netty-all\4.1.38.Final\netty-all-4.1.38.Final.jar;D:\Program Files\maven\reponsitory\com\google\code\gson\gson\2.8.5\gson-2.8.5.jar;D:\Program Files\maven\reponsitory\org\yaml\snakeyaml\1.23\snakeyaml-1.23.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-starter\2.1.7.RELEASE\spring-boot-starter-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot\2.1.7.RELEASE\spring-boot-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-autoconfigure\2.1.7.RELEASE\spring-boot-autoconfigure-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-starter-logging\2.1.7.RELEASE\spring-boot-starter-logging-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;D:\Program Files\maven\reponsitory\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;D:\Program Files\maven\reponsitory\org\apache\logging\log4j\log4j-to-slf4j\2.11.2\log4j-to-slf4j-2.11.2.jar;D:\Program Files\maven\reponsitory\org\apache\logging\log4j\log4j-api\2.11.2\log4j-api-2.11.2.jar;D:\Program Files\maven\reponsitory\org\slf4j\jul-to-slf4j\1.7.26\jul-to-slf4j-1.7.26.jar;D:\Program Files\maven\reponsitory\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-core\5.1.9.RELEASE\spring-core-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-jcl\5.1.9.RELEASE\spring-jcl-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\apache\dubbo\dubbo-spring-boot-starter\2.7.3\dubbo-spring-boot-starter-2.7.3.jar;D:\Program Files\maven\reponsitory\org\apache\dubbo\dubbo-spring-boot-autoconfigure\2.7.3\dubbo-spring-boot-autoconfigure-2.7.3.jar;D:\Program Files\maven\reponsitory\org\apache\dubbo\dubbo-spring-boot-autoconfigure-compatible\2.7.3\dubbo-spring-boot-autoconfigure-compatible-2.7.3.jar;D:\Program Files\maven\reponsitory\org\apache\curator\curator-recipes\4.0.1\curator-recipes-4.0.1.jar;D:\Program Files\maven\reponsitory\org\apache\curator\curator-framework\4.0.1\curator-framework-4.0.1.jar;D:\Program Files\maven\reponsitory\org\apache\curator\curator-client\4.0.1\curator-client-4.0.1.jar;D:\Program Files\maven\reponsitory\com\google\guava\guava\20.0\guava-20.0.jar;D:\Program Files\maven\reponsitory\org\apache\zookeeper\zookeeper\3.4.13\zookeeper-3.4.13.jar;D:\Program Files\maven\reponsitory\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;D:\Program Files\maven\reponsitory\log4j\log4j\1.2.16\log4j-1.2.16.jar;D:\Program Files\maven\reponsitory\jline\jline\0.9.94\jline-0.9.94.jar;D:\Program Files\maven\reponsitory\org\apache\yetus\audience-annotations\0.5.0\audience-annotations-0.5.0.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-starter-web\2.1.7.RELEASE\spring-boot-starter-web-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-starter-json\2.1.7.RELEASE\spring-boot-starter-json-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\core\jackson-databind\2.9.9\jackson-databind-2.9.9.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\core\jackson-core\2.9.9\jackson-core-2.9.9.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.9\jackson-datatype-jdk8-2.9.9.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.9\jackson-datatype-jsr310-2.9.9.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.9\jackson-module-parameter-names-2.9.9.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-starter-tomcat\2.1.7.RELEASE\spring-boot-starter-tomcat-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\org\apache\tomcat\embed\tomcat-embed-core\9.0.22\tomcat-embed-core-9.0.22.jar;D:\Program Files\maven\reponsitory\org\apache\tomcat\embed\tomcat-embed-el\9.0.22\tomcat-embed-el-9.0.22.jar;D:\Program Files\maven\reponsitory\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.22\tomcat-embed-websocket-9.0.22.jar;D:\Program Files\maven\reponsitory\org\hibernate\validator\hibernate-validator\6.0.17.Final\hibernate-validator-6.0.17.Final.jar;D:\Program Files\maven\reponsitory\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;D:\Program Files\maven\reponsitory\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;D:\Program Files\maven\reponsitory\com\fasterxml\classmate\1.4.0\classmate-1.4.0.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-web\5.1.9.RELEASE\spring-web-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-webmvc\5.1.9.RELEASE\spring-webmvc-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;D:\workspace\IntelliJ Idea\source\cloudplus\provider\usm-admin-provider-api\target\classes;D:\IDEA\IntelliJ IDEA 2019.1.3\lib\idea_rt.jar;C:\Users\Eric\.IntelliJIdea2019.1\system\captureAgent\debugger-agent.jar
+2019-09-15 21:26:57.487  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=D:\Program Files\java8\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Program Files\maven\apache-maven-3.5.4\bin\;D:\Program Files\java8\jdk\bin\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 8.0\bin;D:\progremerTools\nodejs\;D:\progremerTools\sonarqube-7.7\sonarqube-7.7\bin\windows-x86-64;;D:\Program Files (x86)\Bluetooth Command Line Tools\bin;D:\progremerTools\scala\bin;D:\progremerTools\sbt\bin;C:\Users\Eric\scoop\shims;C:\Users\Eric\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\JetBrains\IntelliJ IDEA 2019.1.3\bin;;C:\Users\Eric\AppData\Roaming\npm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;.
+2019-09-15 21:26:57.487  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=C:\Users\Eric\AppData\Local\Temp\
+2019-09-15 21:26:57.487  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2019-09-15 21:26:57.487  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Windows 10
+2019-09-15 21:26:57.487  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2019-09-15 21:26:57.487  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.0
+2019-09-15 21:26:57.488  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=Eric
+2019-09-15 21:26:57.488  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=C:\Users\Eric
+2019-09-15 21:26:57.488  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=D:\workspace\IntelliJ Idea\source\cloudplus
+2019-09-15 21:26:57.490  INFO 31924 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@437eeb4
+2019-09-15 21:26:57.530  INFO 31924 --- [main-SendThread(activate.navicat.com:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server activate.navicat.com/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2019-09-15 21:26:57.535  INFO 31924 --- [main-SendThread(activate.navicat.com:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to activate.navicat.com/127.0.0.1:2181, initiating session
+2019-09-15 21:26:57.535  INFO 31924 --- [main] o.a.c.f.imps.CuratorFrameworkImpl        : Default schema
+2019-09-15 21:26:57.549  INFO 31924 --- [main-SendThread(activate.navicat.com:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server activate.navicat.com/127.0.0.1:2181, sessionid = 0x1000fae59ce0003, negotiated timeout = 40000
+2019-09-15 21:26:57.567  INFO 31924 --- [main-EventThread] o.a.c.f.state.ConnectionStateManager     : State change: CONNECTED
+2019-09-15 21:26:59.973  INFO 31924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-09-15 21:26:59.984  INFO 31924 --- [main] com.LouisApplication                     : Started LouisApplication in 24.165 seconds (JVM running for 32.469)
+2019-09-15 21:33:11.317  INFO 31924 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-15 21:33:11.318  INFO 31924 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-15 21:33:11.373  INFO 31924 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 55 ms
+2019-09-15 21:33:13.661 ERROR 31924 --- [http-nio-8081-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8080/elkdemo": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_221]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_221]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_221]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_221]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_221]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_221]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_221]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_221]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_221]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_221]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226) ~[na:1.8.0_221]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_221]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_221]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_221]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at com.louis.elk.ElkController.helloWorld1(ElkController.java:39) ~[classes/:na]
+	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45005) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+
+2019-09-15 21:34:17.677 ERROR 31924 --- [http-nio-8081-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8080/elkdemo": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_221]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_221]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_221]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_221]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_221]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_221]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_221]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_221]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_221]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_221]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_221]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_221]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226) ~[na:1.8.0_221]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_221]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_221]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_221]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at com.louis.elk.ElkController.helloWorld1(ElkController.java:39) ~[classes/:na]
+	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45005) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118) ~[spring-web-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.22.jar:9.0.22]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+
+2019-09-15 21:35:04.118  INFO 31924 --- [Thread-16] .b.c.e.AwaitingNonWebApplicationListener :  [Dubbo] Current Spring Boot Application is about to shutdown...
+2019-09-15 21:35:04.133  INFO 31924 --- [Curator-Framework-0] o.a.c.f.imps.CuratorFrameworkImpl        : backgroundOperationsLoop exiting
+2019-09-15 21:35:04.141  INFO 31924 --- [Thread-16] org.apache.zookeeper.ZooKeeper           : Session: 0x1000fae59ce0003 closed
+2019-09-15 21:35:04.141  INFO 31924 --- [main-EventThread] org.apache.zookeeper.ClientCnxn          : EventThread shut down for session: 0x1000fae59ce0003
+2019-09-15 21:35:04.158  INFO 31924 --- [Thread-16] o.a.c.f.imps.CuratorFrameworkImpl        : Starting
+2019-09-15 21:35:04.159  INFO 31924 --- [Thread-16] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@1b4e342
+2019-09-15 21:35:04.161  INFO 31924 --- [Thread-16] o.a.c.f.imps.CuratorFrameworkImpl        : Default schema
+2019-09-15 21:35:04.163  INFO 31924 --- [Thread-16-SendThread(activate.navicat.com:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server activate.navicat.com/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2019-09-15 21:35:04.164  INFO 31924 --- [Thread-16-SendThread(activate.navicat.com:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to activate.navicat.com/127.0.0.1:2181, initiating session
+2019-09-15 21:35:04.167  INFO 31924 --- [Thread-16-SendThread(activate.navicat.com:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server activate.navicat.com/127.0.0.1:2181, sessionid = 0x1000fae59ce0004, negotiated timeout = 40000
+2019-09-15 21:35:04.168  INFO 31924 --- [Thread-16-EventThread] o.a.c.f.state.ConnectionStateManager     : State change: CONNECTED
+2019-09-15 21:35:04.184  INFO 31924 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-15 21:35:04.185  INFO 31924 --- [Thread-16] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2019-09-15 21:35:15.288  INFO 32708 --- [main] d.s.b.c.e.WelcomeLogoApplicationListener : 
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2019-09-15 21:35:15.305  INFO 32708 --- [main] e.OverrideDubboConfigApplicationListener : Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-provider-sample, dubbo.application.qos-accept-foreign-ip=false, dubbo.application.qos-enable=true, dubbo.application.qos-port=22222, dubbo.config.multiple=true, dubbo.protocol.name=dubbo, dubbo.protocol.port=20880, dubbo.registry.address=zookeeper://127.0.0.1:2181, dubbo.scan.base-packages=com.louis}
+2019-09-15 21:35:15.773  INFO 32708 --- [main] com.LouisApplication                     : Starting LouisApplication on ERIC with PID 32708 (started by Eric in D:\workspace\IntelliJ Idea\source\cloudplus)
+2019-09-15 21:35:15.775  INFO 32708 --- [main] com.LouisApplication                     : No active profile set, falling back to default profiles: default
+2019-09-15 21:35:21.510  INFO 32708 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+2019-09-15 21:35:21.512  INFO 32708 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+2019-09-15 21:35:21.513  INFO 32708 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+2019-09-15 21:35:21.513  INFO 32708 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+2019-09-15 21:35:21.514  INFO 32708 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProtocolConfig#0, class : org.apache.dubbo.config.ProtocolConfig] has been registered.
+2019-09-15 21:35:21.514  INFO 32708 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProtocolConfig#0] has been registered.
+2019-09-15 21:35:21.791  INFO 32708 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-09-15 21:35:21.791  INFO 32708 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2019-09-15 21:35:22.441  INFO 32708 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-15 21:35:22.452  INFO 32708 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-15 21:35:22.456  INFO 32708 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-15 21:35:23.809  INFO 32708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-09-15 21:35:23.876  INFO 32708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-15 21:35:23.876  INFO 32708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-15 21:35:24.135  INFO 32708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-15 21:35:24.136  INFO 32708 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8188 ms
+2019-09-15 21:35:25.225  INFO 32708 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-15 21:35:25.710  INFO 32708 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+2019-09-15 21:35:25.725  INFO 32708 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+2019-09-15 21:35:25.741  INFO 32708 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProtocolConfig#0] have been binding by prefix of configuration properties : dubbo.protocol
+2019-09-15 21:35:26.796  INFO 32708 --- [main] org.apache.curator.utils.Compatibility   : Running in ZooKeeper 3.4.x compatibility mode
+2019-09-15 21:35:26.884  INFO 32708 --- [main] o.a.c.f.imps.CuratorFrameworkImpl        : Starting
+2019-09-15 21:35:35.910  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.13-2d71af4dbe22557fda74f9a9b4309b15a7487f03, built on 06/29/2018 00:39 GMT
+2019-09-15 21:35:35.910  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=ERIC
+2019-09-15 21:35:35.910  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_221
+2019-09-15 21:35:35.910  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2019-09-15 21:35:35.911  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=D:\Program Files\java8\jdk\jre
+2019-09-15 21:35:35.911  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=D:\Program Files\java8\jdk\jre\lib\charsets.jar;D:\Program Files\java8\jdk\jre\lib\deploy.jar;D:\Program Files\java8\jdk\jre\lib\ext\access-bridge-64.jar;D:\Program Files\java8\jdk\jre\lib\ext\cldrdata.jar;D:\Program Files\java8\jdk\jre\lib\ext\dnsns.jar;D:\Program Files\java8\jdk\jre\lib\ext\jaccess.jar;D:\Program Files\java8\jdk\jre\lib\ext\jfxrt.jar;D:\Program Files\java8\jdk\jre\lib\ext\localedata.jar;D:\Program Files\java8\jdk\jre\lib\ext\nashorn.jar;D:\Program Files\java8\jdk\jre\lib\ext\sunec.jar;D:\Program Files\java8\jdk\jre\lib\ext\sunjce_provider.jar;D:\Program Files\java8\jdk\jre\lib\ext\sunmscapi.jar;D:\Program Files\java8\jdk\jre\lib\ext\sunpkcs11.jar;D:\Program Files\java8\jdk\jre\lib\ext\zipfs.jar;D:\Program Files\java8\jdk\jre\lib\javaws.jar;D:\Program Files\java8\jdk\jre\lib\jce.jar;D:\Program Files\java8\jdk\jre\lib\jfr.jar;D:\Program Files\java8\jdk\jre\lib\jfxswt.jar;D:\Program Files\java8\jdk\jre\lib\jsse.jar;D:\Program Files\java8\jdk\jre\lib\management-agent.jar;D:\Program Files\java8\jdk\jre\lib\plugin.jar;D:\Program Files\java8\jdk\jre\lib\resources.jar;D:\Program Files\java8\jdk\jre\lib\rt.jar;D:\workspace\IntelliJ Idea\source\cloudplus\provider\usm-admin-provider-service\target\classes;D:\Program Files\maven\reponsitory\org\apache\dubbo\dubbo\2.7.3\dubbo-2.7.3.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-context\5.1.9.RELEASE\spring-context-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-aop\5.1.9.RELEASE\spring-aop-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-beans\5.1.9.RELEASE\spring-beans-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-expression\5.1.9.RELEASE\spring-expression-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;D:\Program Files\maven\reponsitory\io\netty\netty-all\4.1.38.Final\netty-all-4.1.38.Final.jar;D:\Program Files\maven\reponsitory\com\google\code\gson\gson\2.8.5\gson-2.8.5.jar;D:\Program Files\maven\reponsitory\org\yaml\snakeyaml\1.23\snakeyaml-1.23.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-starter\2.1.7.RELEASE\spring-boot-starter-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot\2.1.7.RELEASE\spring-boot-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-autoconfigure\2.1.7.RELEASE\spring-boot-autoconfigure-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-starter-logging\2.1.7.RELEASE\spring-boot-starter-logging-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;D:\Program Files\maven\reponsitory\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;D:\Program Files\maven\reponsitory\org\apache\logging\log4j\log4j-to-slf4j\2.11.2\log4j-to-slf4j-2.11.2.jar;D:\Program Files\maven\reponsitory\org\apache\logging\log4j\log4j-api\2.11.2\log4j-api-2.11.2.jar;D:\Program Files\maven\reponsitory\org\slf4j\jul-to-slf4j\1.7.26\jul-to-slf4j-1.7.26.jar;D:\Program Files\maven\reponsitory\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-core\5.1.9.RELEASE\spring-core-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-jcl\5.1.9.RELEASE\spring-jcl-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\apache\dubbo\dubbo-spring-boot-starter\2.7.3\dubbo-spring-boot-starter-2.7.3.jar;D:\Program Files\maven\reponsitory\org\apache\dubbo\dubbo-spring-boot-autoconfigure\2.7.3\dubbo-spring-boot-autoconfigure-2.7.3.jar;D:\Program Files\maven\reponsitory\org\apache\dubbo\dubbo-spring-boot-autoconfigure-compatible\2.7.3\dubbo-spring-boot-autoconfigure-compatible-2.7.3.jar;D:\Program Files\maven\reponsitory\org\apache\curator\curator-recipes\4.0.1\curator-recipes-4.0.1.jar;D:\Program Files\maven\reponsitory\org\apache\curator\curator-framework\4.0.1\curator-framework-4.0.1.jar;D:\Program Files\maven\reponsitory\org\apache\curator\curator-client\4.0.1\curator-client-4.0.1.jar;D:\Program Files\maven\reponsitory\com\google\guava\guava\20.0\guava-20.0.jar;D:\Program Files\maven\reponsitory\org\apache\zookeeper\zookeeper\3.4.13\zookeeper-3.4.13.jar;D:\Program Files\maven\reponsitory\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;D:\Program Files\maven\reponsitory\log4j\log4j\1.2.16\log4j-1.2.16.jar;D:\Program Files\maven\reponsitory\jline\jline\0.9.94\jline-0.9.94.jar;D:\Program Files\maven\reponsitory\org\apache\yetus\audience-annotations\0.5.0\audience-annotations-0.5.0.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-starter-web\2.1.7.RELEASE\spring-boot-starter-web-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-starter-json\2.1.7.RELEASE\spring-boot-starter-json-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\core\jackson-databind\2.9.9\jackson-databind-2.9.9.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\core\jackson-core\2.9.9\jackson-core-2.9.9.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.9\jackson-datatype-jdk8-2.9.9.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.9\jackson-datatype-jsr310-2.9.9.jar;D:\Program Files\maven\reponsitory\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.9\jackson-module-parameter-names-2.9.9.jar;D:\Program Files\maven\reponsitory\org\springframework\boot\spring-boot-starter-tomcat\2.1.7.RELEASE\spring-boot-starter-tomcat-2.1.7.RELEASE.jar;D:\Program Files\maven\reponsitory\org\apache\tomcat\embed\tomcat-embed-core\9.0.22\tomcat-embed-core-9.0.22.jar;D:\Program Files\maven\reponsitory\org\apache\tomcat\embed\tomcat-embed-el\9.0.22\tomcat-embed-el-9.0.22.jar;D:\Program Files\maven\reponsitory\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.22\tomcat-embed-websocket-9.0.22.jar;D:\Program Files\maven\reponsitory\org\hibernate\validator\hibernate-validator\6.0.17.Final\hibernate-validator-6.0.17.Final.jar;D:\Program Files\maven\reponsitory\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;D:\Program Files\maven\reponsitory\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;D:\Program Files\maven\reponsitory\com\fasterxml\classmate\1.4.0\classmate-1.4.0.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-web\5.1.9.RELEASE\spring-web-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\springframework\spring-webmvc\5.1.9.RELEASE\spring-webmvc-5.1.9.RELEASE.jar;D:\Program Files\maven\reponsitory\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;D:\workspace\IntelliJ Idea\source\cloudplus\provider\usm-admin-provider-api\target\classes;D:\IDEA\IntelliJ IDEA 2019.1.3\lib\idea_rt.jar;C:\Users\Eric\.IntelliJIdea2019.1\system\captureAgent\debugger-agent.jar
+2019-09-15 21:35:35.911  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=D:\Program Files\java8\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Program Files\maven\apache-maven-3.5.4\bin\;D:\Program Files\java8\jdk\bin\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 8.0\bin;D:\progremerTools\nodejs\;D:\progremerTools\sonarqube-7.7\sonarqube-7.7\bin\windows-x86-64;;D:\Program Files (x86)\Bluetooth Command Line Tools\bin;D:\progremerTools\scala\bin;D:\progremerTools\sbt\bin;C:\Users\Eric\scoop\shims;C:\Users\Eric\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\JetBrains\IntelliJ IDEA 2019.1.3\bin;;C:\Users\Eric\AppData\Roaming\npm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;.
+2019-09-15 21:35:35.911  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=C:\Users\Eric\AppData\Local\Temp\
+2019-09-15 21:35:35.911  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2019-09-15 21:35:35.911  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Windows 10
+2019-09-15 21:35:35.911  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2019-09-15 21:35:35.911  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.0
+2019-09-15 21:35:35.911  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=Eric
+2019-09-15 21:35:35.911  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=C:\Users\Eric
+2019-09-15 21:35:35.911  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=D:\workspace\IntelliJ Idea\source\cloudplus
+2019-09-15 21:35:35.914  INFO 32708 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@47c237fe
+2019-09-15 21:35:35.955  INFO 32708 --- [main-SendThread(activate.navicat.com:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server activate.navicat.com/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2019-09-15 21:35:35.962  INFO 32708 --- [main-SendThread(activate.navicat.com:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to activate.navicat.com/127.0.0.1:2181, initiating session
+2019-09-15 21:35:35.961  INFO 32708 --- [main] o.a.c.f.imps.CuratorFrameworkImpl        : Default schema
+2019-09-15 21:35:35.975  INFO 32708 --- [main-SendThread(activate.navicat.com:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server activate.navicat.com/127.0.0.1:2181, sessionid = 0x1000fae59ce0005, negotiated timeout = 40000
+2019-09-15 21:35:35.993  INFO 32708 --- [main-EventThread] o.a.c.f.state.ConnectionStateManager     : State change: CONNECTED
+2019-09-15 21:35:37.889  INFO 32708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-09-15 21:35:37.901  INFO 32708 --- [main] com.LouisApplication                     : Started LouisApplication in 23.405 seconds (JVM running for 28.554)
+2019-09-15 21:35:45.768  INFO 32708 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-15 21:35:45.768  INFO 32708 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-15 21:35:45.815  INFO 32708 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 47 ms
+2019-09-15 21:35:54.996  INFO 32708 --- [http-nio-8081-exec-2] com.louis.elk.ElkController              : /elkdemo - &gt; Hello user ! Sun Sep 15 21:35:54 CST 2019
+2019-09-15 21:35:55.077  INFO 32708 --- [http-nio-8081-exec-1] com.louis.elk.ElkController              : /elk - &gt; Hello user ! Sun Sep 15 21:35:54 CST 2019
+2019-09-15 21:35:55.087 ERROR 32708 --- [http-nio-8081-exec-3] com.louis.elk.ElkController              : / by zero
+2019-09-15 21:35:55.088 ERROR 32708 --- [http-nio-8081-exec-3] com.louis.elk.ElkController              : Exception As String :: - &gt; java.lang.ArithmeticException: / by zero
+	at com.louis.elk.ElkController.exception(ElkController.java:59)
+	at sun.reflect.GeneratedMethodAccessor59.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45005)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-09-15 21:35:55.092  INFO 32708 --- [http-nio-8081-exec-1] com.louis.elk.ElkController              : /elk trying to print exception - &gt; java.lang.ArithmeticException: / by zero
+	at com.louis.elk.ElkController.exception(ElkController.java:59)
+	at sun.reflect.GeneratedMethodAccessor59.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45005)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
