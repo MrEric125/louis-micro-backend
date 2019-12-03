@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>server</artifactId>
-        <groupId>com.louis.cloudPlus</groupId>
+        <groupId>org.louis.micro</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -91,7 +91,7 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.louis.cloudPlus</groupId>
+            <groupId>org.louis.micro</groupId>
             <artifactId>usm-admin-provider-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

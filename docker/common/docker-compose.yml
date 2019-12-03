@@ -12,8 +12,8 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - es2/data:/usr/share/elasticsearch/data
-        - es2/log:/usr/share/elasticsearch/logs
+      - es1data:/usr/share/elasticsearch/data
+#      - es1/log:/usr/share/elasticsearch/logs
     ports:
       - 9200:9200
     networks:
@@ -31,8 +31,8 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - es2/data:/usr/share/elasticsearch/data
-      - es2/log:/usr/share/elasticsearch/logs
+      - es2data:/usr/share/elasticsearch/data
+#      - es2/log:/usr/share/elasticsearch/logs
     networks:
       - esnet
   kibana:
@@ -49,18 +49,23 @@ services:
   logstash:
     image: logstash:6.8.3
     container_name: logstash
+    networks:
+      - esnet
     ports:
       - 5044:5044
       - 9600:9600
-    volumes:
-      -
+
 
 
 volumes:
-  esdata1:
+  es1data:
     driver: local
-  esdata2:
+#  es1/log:
+#    driver: local
+  es2data:
     driver: local
+#  es2/log:
+#    driver: local
 
 networks:
   esnet:

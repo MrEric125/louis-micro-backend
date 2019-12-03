@@ -1,4 +1,4 @@
-package com.louis.config;
+package org.louis.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

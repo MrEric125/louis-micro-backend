@@ -1,7 +1,7 @@
-package com.louis.dubbo;
+package org.louis.dubbo;
 
 
-import com.louis.cloudplus.DemoService;
+import org.louis.micro.DemoService;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Value;
 
