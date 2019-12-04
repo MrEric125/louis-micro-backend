@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>micro-common</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>common-security</module>
+        <module>common-web</module>
+        <module>common-micro-web</module>
+    </modules>
 
 
 </project>

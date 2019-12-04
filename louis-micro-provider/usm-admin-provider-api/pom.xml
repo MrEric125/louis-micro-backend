@@ -3,16 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>parent</artifactId>
+        <artifactId>provider</artifactId>
         <groupId>org.louis.micro</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>provider</artifactId>
-    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <licenses>
         <license>
             <name>Apache 2.0</name>
@@ -27,15 +24,22 @@
             <email>lj125999@163.com</email>
         </developer>
     </developers>
-    <modules>
-        <module>usm-admin-provider-api</module>
-        <module>usm-admin-provider-service</module>
-    </modules>
-    <dependencies>
 
+    <artifactId>usm-admin-provider-api</artifactId>
+
+    <dependencies>
+        <!-- Dubbo Spring Boot Starter -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
 
     </dependencies>
-
 
 
 </project>
