@@ -1,6 +1,5 @@
 package org.micro.security.entity;
 
-import com.louis.core.entity.AbstractAuditable;
 import com.louis.core.entity.BaseEntity;
 import lombok.*;
 
@@ -21,8 +20,8 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
-@Table(name = "client_detail")
-public class ClientDetail extends AbstractAuditable<Long> {
+@Table(name = "sys_client_detail")
+public class ClientDetailEntity extends AbstractAuditable<Long> {
     private static final long serialVersionUID = 7100834559771058030L;
     @NonNull
     @NotNull
@@ -37,8 +36,6 @@ public class ClientDetail extends AbstractAuditable<Long> {
     @Column(name = "scope", nullable = false)
     private String scope;
 
-    @Column(name = "authorized_grant_types")
-    private String authorizedGrandTypes;
 
     @Column(name = "web_server_redirect_uri", nullable = false)
     private String redirectUrl;
@@ -47,10 +44,10 @@ public class ClientDetail extends AbstractAuditable<Long> {
     private String authorities;
 
     @Column(name = "access_token_validity")
-    private String accessTokenValidity;
+    private Integer accessTokenValidity;
 
     @Column(name = "refresh_token_validity")
-    private String refreshTokenValidity;
+    private Integer refreshTokenValidity;
 
     @Column(name = "additional_information")
     private String additionalInformation;

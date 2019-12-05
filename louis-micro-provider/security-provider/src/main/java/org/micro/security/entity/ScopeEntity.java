@@ -6,11 +6,12 @@ import lombok.*;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author louis
  * <p>
- * Date: 2019/12/4
+ * Date: 2019/12/5
  * Description:
  */
 @Data
@@ -19,11 +20,11 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
-@Table(name = "sys_grant_type")
-public class GrandType extends BaseEntity<Long> {
+@Table(name = "sys_scope")
+public class ScopeEntity extends BaseEntity<Long> {
 
-    @Column(name = "value", nullable = false, unique = true)
-    private String value;
-
-
+    @NonNull
+    @NotNull
+    @Column(name = "scope", unique = true, nullable = false, length = 200)
+    private String scopeValue;
 }

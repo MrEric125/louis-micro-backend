@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
  * Description:
  */
 @Service
-public class UserService implements UserDetailsService {
+public class UserService {
 
 
     @Autowired
@@ -41,13 +41,12 @@ public class UserService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public Collection<GrantedAuthority> loadUserAuthorities(Long userId) {
+    private Collection<GrantedAuthority> loadUserAuthorities(Long userId) {
         List<UserAction> ownAuthList = userActionService.getOwnActionListByUserId(userId);
         return ownAuthList.stream()
                 .map(x -> new SimpleGrantedAuthority(x.getUrl()))
                 .collect(Collectors.toList());
     }
-    @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Collection<GrantedAuthority> grantedAuthorities;
         SysUser user=userRepository.findByUsername(username).orElseThrow(()-> new BadCredentialsException("用户名不存在或者密码错误"));

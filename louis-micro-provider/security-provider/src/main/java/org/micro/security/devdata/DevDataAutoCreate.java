@@ -41,22 +41,24 @@ public class DevDataAutoCreate {
         GrandType refreshToken = GrandType.builder().value("refresh_token").build();
         return Lists.newArrayList(password, authorizationCode, refreshToken);
     }
-    public static List<ClientDetail> loadClientDetails() {
-        ClientDetail clientDetail = ClientDetail.builder()
+    public static List<ClientDetailEntity> loadClientDetails() {
+        ClientDetailEntity clientDetail = ClientDetailEntity.builder()
                 .clientId("louis")
                 .clientSecret("123456")
-                .scope("web")
+                .scope("webclient")
                 .redirectUrl("http://baidu.com")
                 .build();
-        ClientDetail clientDetail2 = ClientDetail.builder()
+        ClientDetailEntity clientDetail2 = ClientDetailEntity.builder()
                 .clientId("client")
                 .clientSecret("123456")
-                .scope("web")
+                .scope("webclient")
                 .redirectUrl("http://baidu.com")
                 .build();
         return Lists.newArrayList(clientDetail, clientDetail2);
-
-
+    }
+    public List<ScopeEntity> loadScope() {
+        ScopeEntity scopeEntity = ScopeEntity.builder().scopeValue("webclient").build();
+        return Lists.newArrayList(scopeEntity);
     }
 
 

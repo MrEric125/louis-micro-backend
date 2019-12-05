@@ -4,6 +4,8 @@ import com.louis.core.repository.BaseRepository;
 import org.micro.security.entity.GrandType;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 /**
  * @author louis
  * <p>
@@ -12,5 +14,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface GrandTypeRepository extends BaseRepository<GrandType, Long> {
+
+    Optional<GrandType> findByValue(String grandTypeValue);
 
 }

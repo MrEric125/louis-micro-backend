@@ -13,7 +13,7 @@ security:
       client-id: client
       grant-type: authorization_code,password
       scope: webclient
-      registered-redirect-uri: http://www.baidu.com
+      registered-redirect-uri: http://localhost:8981/login
 ribbon:
   eureka:
     enabled: true
