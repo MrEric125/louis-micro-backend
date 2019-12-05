@@ -1,13 +1,3 @@
-zuul:
-  host:
-    connect-timeout-millis: 20000
-    socket-timeout-millis: 20000
-  routes:
-
-#    权限认证
-    oauth-service:
-      serviceId: security-service-A
-      path: /security/**  # 通过这个路径路由到order-service-a这个服务的根路径
 
 # 设置一个公共的前缀
 #  prefix: /api
@@ -16,10 +6,10 @@ security:
   oauth2:
     resource:
       prefer-token-info: true
-      user-info-uri: http://localhost:9991/user
+      user-info-uri: http://localhost:9311/user
     client:
-      access-token-uri: http://localhost:9991/oauth/token
-      user-authorization-uri: http://localhost:9991/oauth/authorize
+      access-token-uri: http://localhost:9311/oauth/token
+      user-authorization-uri: http://localhost:9311/oauth/authorize
       client-id: client
       grant-type: authorization_code,password
       scope: webclient

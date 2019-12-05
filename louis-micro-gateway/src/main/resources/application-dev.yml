@@ -24,4 +24,19 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 server:
   port: 8981
+zuul:
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  routes:
+
+    #    权限认证
+    security-route:
+      serviceId: security-service-A
+      path: /user/**  # 通过这个路径路由到order-service-a这个服务的根路径
+
+proxy:
+  auth:
+    routes:
+      security-route: oauth2
 

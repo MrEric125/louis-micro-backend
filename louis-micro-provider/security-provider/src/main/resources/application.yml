@@ -2,7 +2,7 @@
 eureka:
   instance:
     prefer-ip-address: true
-    appname: comment-service-web
+    appname: security-service-A
   client:
     register-with-eureka: true
     fetch-registry: true
