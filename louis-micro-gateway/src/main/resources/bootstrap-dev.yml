@@ -13,7 +13,8 @@ security:
       client-id: client
       grant-type: authorization_code,password
       scope: webclient
-      registered-redirect-uri: http://localhost:8981/login
+      registered-redirect-uri: http://localhost:8981/uas/user
+
 ribbon:
   eureka:
     enabled: true
