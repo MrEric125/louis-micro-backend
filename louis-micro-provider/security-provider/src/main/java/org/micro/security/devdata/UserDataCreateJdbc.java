@@ -1,9 +1,13 @@
 package org.micro.security.devdata;
 
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.micro.security.entity.SysRole;
 import org.micro.security.entity.SysUser;
+import org.micro.security.entity.UserAction;
 import org.micro.security.entity.UserRole;
 import org.micro.security.repository.RoleRepository;
+import org.micro.security.repository.UserActionRepository;
 import org.micro.security.repository.UserRepository;
 import org.micro.security.repository.UserRoleRepository;
 import org.springframework.beans.factory.InitializingBean;
@@ -30,6 +34,9 @@ public class UserDataCreateJdbc implements InitializingBean {
 
     @Autowired
     private UserRoleRepository userRoleRepository;
+
+    @Autowired
+    private UserActionRepository userActionRepository;
 
 
     @Override
@@ -65,7 +72,14 @@ public class UserDataCreateJdbc implements InitializingBean {
                             )
                     );
         });
-
-
+        savedUser.forEach(sysUser -> DevDataAutoCreate.loadUserAction()
+                .stream()
+                .filter(x -> StringUtils.equals(String.valueOf(x.getUser()), sysUser.getIdToString()))
+                .forEach(userAction -> {
+                    List<UserAction> byUser = userActionRepository.findByUser(sysUser.getId());
+                    if (CollectionUtils.isEmpty(byUser)) {
+                        userActionRepository.save(userAction);
+                    }
+                }));
     }
 }

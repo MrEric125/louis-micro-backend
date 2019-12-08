@@ -30,7 +30,10 @@ public class DevDataAutoCreate {
 
     }
     public static List<UserAction> loadUserAction() {
-        return null;
+        UserAction userAction = UserAction.builder().actionCode("select").menuId(1L).url("/**").user(1L).build();
+        UserAction userAction1 = UserAction.builder().actionCode("select").menuId(1L).url("/**").user(2L).build();
+        UserAction userAction2 = UserAction.builder().actionCode("select").menuId(1L).url("/**").user(3L).build();
+        return Lists.newArrayList(userAction, userAction1, userAction2);
     }
     public  static List<RolePermissionEntity> loadrolePermissionEntity() {
         return null;

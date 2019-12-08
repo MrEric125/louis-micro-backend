@@ -34,6 +34,13 @@ zuul:
     security-route:
       serviceId: security-service-A
       path: /uas/**  # 通过这个路径路由到order-service-a这个服务的根路径
+    order-route:
+      serviceId: order-service-A
+      path: /order/**
+  retryable: true
+  ignored-services: *
+  add-host-header: true
+  sensitive-headers: *
 
 proxy:
   auth:

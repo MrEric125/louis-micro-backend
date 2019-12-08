@@ -9,9 +9,16 @@ import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
+import org.springframework.security.oauth2.provider.OAuth2Request;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author louis
@@ -75,5 +82,26 @@ public class AuthHeaderFilter extends ZuulFilter {
             // 传递给后续微服务
             requestContext.addZuulRequestHeader(CoreHeaderInterceptor.HEADER_LABEL, authHeader);
         }
+    }
+    private Object doRun() {
+        RequestContext currentContext = RequestContext.getCurrentContext();
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        if (!(authentication instanceof OAuth2Authentication)) {
+            return null;
+        }
+        OAuth2Authentication oAuth2Authentication = (OAuth2Authentication) authentication;
+        Authentication userAuthentication = oAuth2Authentication.getUserAuthentication();
+
+        String name = userAuthentication.getName();
+//        取出用户权限
+        List<String> authority = userAuthentication.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
+
+        OAuth2Request oAuth2Request = oAuth2Authentication.getOAuth2Request();
+
+        return null;
+
+
     }
 }

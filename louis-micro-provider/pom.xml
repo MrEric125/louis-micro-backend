@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>provider</artifactId>
+    <artifactId>louis-micro-provider</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <licenses>
@@ -31,6 +31,7 @@
         <module>usm-admin-provider-api</module>
         <module>usm-admin-provider-service</module>
         <module>security-provider</module>
+        <module>order-provider</module>
     </modules>
     <dependencies>
 
