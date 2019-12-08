@@ -59,7 +59,7 @@ public class PermissionServiceImpl implements UserPermissionService {
         });
         Set<String> currentAuthorityUrl = SecurityUtils.getCurrentAuthorityUrl(ifPresent);
         String requestURI = request.getRequestURI();
-        log.info("验证权限 loginName={}, requestURI={}, hasAuthorityUrl={}", currentLoginName, requestURI, Joiner.on(",").join(currentAuthorityUrl));
+        log.info(">>>>>验证权限 loginName={}, requestURI={}, hasAuthorityUrl={}", currentLoginName, requestURI, Joiner.on(",").join(currentAuthorityUrl));
 
         return currentAuthorityUrl.stream()
                 .filter(authorityUrl -> antPathMatcher.match(authorityUrl, requestURI))

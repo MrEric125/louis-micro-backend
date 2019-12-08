@@ -1,0 +1,30 @@
+spring:
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+       ddl-auto: update
+  datasource:
+    platform: MYSQL
+    url: jdbc:mysql://localhost:3306/louis_micro_service?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: Root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  application:
+    name: security-service-A
+
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 9312
+
+logging:
+  level:
+    org:
+      springframework.security: DEBUG
+registry:
+  default:
+    password: registry
+    email: lj125999@163.com
+    phone: 13163780125

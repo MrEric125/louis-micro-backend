@@ -121,12 +121,12 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
         endpoints
                 .authenticationManager(authenticationManager)
 //                授权码模式管理服务
-                .authorizationCodeServices(authorizationCodeServices())
+//                .authorizationCodeServices(authorizationCodeServices())
 //                令牌管理服务
-                .tokenServices(tokenServices())
-                .allowedTokenEndpointRequestMethods(HttpMethod.POST)
+//                .tokenServices(tokenServices())
+//                .allowedTokenEndpointRequestMethods(HttpMethod.POST)
                 .userDetailsService(userDetailsService)
-                .tokenStore(tokenStore())
+//                .tokenStore(tokenStore())
         ;
     }
 
@@ -135,15 +135,15 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
      * @param security
      * @throws Exception
      */
-    @Override
-    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-//        /oauth/token_key的公开
-        security.tokenKeyAccess("permitAll()")
-//                /oauth/check_token
-                .checkTokenAccess("permitAll()")
-//                允许表单认证（申请令牌）
-                .allowFormAuthenticationForClients();
-    }
+//    @Override
+//    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+////        /oauth/token_key的公开
+//        security.tokenKeyAccess("permitAll()")
+////                /oauth/check_token
+//                .checkTokenAccess("permitAll()")
+////                允许表单认证（申请令牌）
+//                .allowFormAuthenticationForClients();
+//    }
 
     /**
      *

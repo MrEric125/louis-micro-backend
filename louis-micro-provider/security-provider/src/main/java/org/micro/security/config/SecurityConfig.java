@@ -61,11 +61,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .anyRequest().authenticated()
 //                .and()
 //                .formLogin();
+//
 //        http.authorizeRequests().anyRequest().access("@permissionService.hasPermission(authentication,request)");
 //    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService());
+//          auth
+//                .inMemoryAuthentication()
+//                .withUser("user").password(passwordEncoder().encode("123456")).authorities("/**")
+//                .and()
+//                .withUser("admin").password(passwordEncoder().encode("123456")).authorities("/**");
+//    }
     }
 }
