@@ -12,7 +12,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   application:
-    name: security-service-A
+    name: security-service-Demo
 
   main:
     allow-bean-definition-overriding: true

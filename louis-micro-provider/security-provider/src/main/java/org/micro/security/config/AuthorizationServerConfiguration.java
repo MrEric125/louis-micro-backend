@@ -1,10 +1,12 @@
 package org.micro.security.config;
 
 import com.google.common.collect.Sets;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.assertj.core.util.Lists;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -37,9 +39,16 @@ import java.util.List;
  * Description:
  * 授权服务配置
  */
+
+@Slf4j
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter implements InitializingBean {
+
+
+    @Value("${spring.profiles.active}")
+    private String profile;
+
 
 
     @Autowired
@@ -80,7 +89,9 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     @Bean
     public ClientDetailsService jdbcClientDetails() {
         // 基于 JDBC 实现，需要事先在数据库配置客户端信息
-        return new JdbcClientDetailsService(dataSource);
+        JdbcClientDetailsService clientDetailsService = new JdbcClientDetailsService(dataSource);
+        clientDetailsService.setPasswordEncoder(passwordEncoder);
+        return clientDetailsService;
     }
 
     /**
@@ -121,12 +132,12 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
         endpoints
                 .authenticationManager(authenticationManager)
 //                授权码模式管理服务
-//                .authorizationCodeServices(authorizationCodeServices())
+                .authorizationCodeServices(authorizationCodeServices())
 //                令牌管理服务
-//                .tokenServices(tokenServices())
-//                .allowedTokenEndpointRequestMethods(HttpMethod.POST)
+                .tokenServices(tokenServices())
+                .allowedTokenEndpointRequestMethods(HttpMethod.POST)
                 .userDetailsService(userDetailsService)
-//                .tokenStore(tokenStore())
+                .tokenStore(tokenStore())
         ;
     }
 
@@ -135,15 +146,15 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
      * @param security
      * @throws Exception
      */
-//    @Override
-//    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-////        /oauth/token_key的公开
-//        security.tokenKeyAccess("permitAll()")
-////                /oauth/check_token
-//                .checkTokenAccess("permitAll()")
-////                允许表单认证（申请令牌）
-//                .allowFormAuthenticationForClients();
-//    }
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+//        /oauth/token_key的公开
+        security.tokenKeyAccess("permitAll()")
+//                /oauth/check_token
+                .checkTokenAccess("permitAll()")
+//                允许表单认证（申请令牌）
+                .allowFormAuthenticationForClients();
+    }
 
     /**
      *
@@ -152,23 +163,26 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
      */
     @Override
     public void afterPropertiesSet() throws Exception {
-        JdbcClientDetailsService jdbcClientDetailsService = (JdbcClientDetailsService) jdbcClientDetails();
-        List<ClientDetails> clientDetails = jdbcClientDetailsService.listClientDetails();
+        if (StringUtils.isNotEmpty(profile) && StringUtils.equals("dev", profile)) {
+            log.info("dev client detail 数据初始化>>>>>");
+            JdbcClientDetailsService jdbcClientDetailsService = (JdbcClientDetailsService) jdbcClientDetails();
+            List<ClientDetails> clientDetails = jdbcClientDetailsService.listClientDetails();
 
-        clientDetails.stream()
-                .filter(x -> StringUtils.equals("client", x.getClientId()))
-                .findAny()
-                .orElseGet(()->{
-                    BaseClientDetails baseClientDetails = new BaseClientDetails();
-                    baseClientDetails.setClientId("client");
-                    baseClientDetails.setClientSecret(passwordEncoder.encode("client"));
-                    baseClientDetails.setAuthorizedGrantTypes(Lists.newArrayList("refresh_token", "password", "client_credentials", "authorization_code","implicit","refresh_token"));
-                    baseClientDetails.setAccessTokenValiditySeconds(30000);
-                    baseClientDetails.setRefreshTokenValiditySeconds(30000);
-                    baseClientDetails.setRegisteredRedirectUri(Sets.newHashSet("http://www.baidu.com"));
-                    baseClientDetails.setScope(Lists.newArrayList("webclient"));
-                    jdbcClientDetailsService.addClientDetails(baseClientDetails);
-                    return baseClientDetails;
-                });
+            clientDetails.stream()
+                    .filter(x -> StringUtils.equals("client", x.getClientId()))
+                    .findAny()
+                    .orElseGet(()->{
+                        BaseClientDetails baseClientDetails = new BaseClientDetails();
+                        baseClientDetails.setClientId("client");
+                        baseClientDetails.setClientSecret(passwordEncoder.encode("client"));
+                        baseClientDetails.setAuthorizedGrantTypes(Lists.newArrayList("refresh_token", "password", "client_credentials", "authorization_code","implicit","refresh_token"));
+                        baseClientDetails.setAccessTokenValiditySeconds(30000);
+                        baseClientDetails.setRefreshTokenValiditySeconds(30000);
+                        baseClientDetails.setRegisteredRedirectUri(Sets.newHashSet("http://www.baidu.com"));
+                        baseClientDetails.setScope(Lists.newArrayList("webclient"));
+                        jdbcClientDetailsService.addClientDetails(baseClientDetails);
+                        return baseClientDetails;
+                    });
+        }
     }
 }

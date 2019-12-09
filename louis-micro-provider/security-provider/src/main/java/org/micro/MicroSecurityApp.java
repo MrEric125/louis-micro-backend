@@ -14,7 +14,6 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
  */
 @EnableJpaRepositories(repositoryBaseClass = SimpleBaseRepository.class)
 @MicroServiceClient
-@EnableResourceServer
 public class MicroSecurityApp {
 
     public static void main(String[] args) {

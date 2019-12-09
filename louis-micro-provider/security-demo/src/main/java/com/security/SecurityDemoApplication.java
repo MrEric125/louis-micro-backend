@@ -4,7 +4,9 @@ package com.security;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,10 +19,12 @@ import java.util.Map;
 @RestController
 public class SecurityDemoApplication {
     @RequestMapping(value = { "/user" }, produces = "application/json")
-    public Map<String, Object> user(OAuth2Authentication user) {
+    public Map<String, Object> user() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
         Map<String, Object> userInfo = new HashMap<>();
-        userInfo.put("user", user.getUserAuthentication().getPrincipal());
-        userInfo.put("authorities", AuthorityUtils.authorityListToSet(user.getUserAuthentication().getAuthorities()));
+        userInfo.put("user", authentication.getPrincipal());
+        userInfo.put("authorities", authentication.getAuthorities());
         return userInfo;
     }
 

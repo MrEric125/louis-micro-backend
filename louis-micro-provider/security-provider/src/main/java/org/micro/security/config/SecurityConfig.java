@@ -1,5 +1,6 @@
 package org.micro.security.config;
 
+import org.micro.security.handler.*;
 import org.micro.security.service.impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -26,6 +27,41 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    /**
+     * 未登陆时返回 JSON 格式的数据给前端（否则为 html）
+     */
+    @Autowired
+    MyAuthenticationEntryPoint authenticationEntryPoint;
+
+    /*
+    *登录成功返回的 JSON 格式数据给前端（否则为 html）
+     */
+    @Autowired
+    MyAuthenticationSuccessHandler authenticationSuccessHandler;
+
+    /**
+     * 登录失败返回的 JSON 格式数据给前端（否则为 html）
+     */
+    @Autowired
+    MyAuthenticationFailureHandler authenticationFailureHandler;
+
+    /**
+     * 注销成功返回的 JSON 格式数据给前端（否则为 登录时的 html）
+     */
+    @Autowired
+    MyLogoutSuccessHandler logoutSuccessHandler;
+
+    /**
+     * 无权访问返回的 JSON 格式数据给前端（否则为 403 html 页面）
+     */
+    @Autowired
+    MyAccessDeniedHandler accessDeniedHandler;
+
+    /**
+     *  自定义安全认证
+     */
+    @Autowired
+    MyAuthenticationProvider provider;
 
 
     @Bean
@@ -38,8 +74,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-
-
     @Bean
     @Override
     protected UserDetailsService userDetailsService() {
@@ -51,28 +85,41 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      * @param
      * @throws Exception
      */
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http.csrf().disable()
-//                .authorizeRequests()
-////                .antMatchers("/r/r1")
-////                .hasAnyAuthority("/p1")
-//                .antMatchers("/user").permitAll()
-//                .anyRequest().authenticated()
-//                .and()
-//                .formLogin();
-//
-//        http.authorizeRequests().anyRequest().access("@permissionService.hasPermission(authentication,request)");
-//    }
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+                .httpBasic()
+                .authenticationEntryPoint(authenticationEntryPoint)
+
+                .and()
+                .authorizeRequests()
+                // 所有/权限认证 的所有请求 都放行
+                .antMatchers("/user/**").permitAll()
+                .anyRequest()
+                .authenticated()// 其他 url 需要身份认证
+
+                .and()
+                .formLogin()  // 开启登录
+                .loginProcessingUrl("/user/login")
+                .usernameParameter("username")//请求验证参数
+                .passwordParameter("password")//请求验证参数
+                .successHandler(authenticationSuccessHandler) // 登录成功
+                .failureHandler(authenticationFailureHandler) // 登录失败
+                .permitAll()
+
+                .and()
+                .logout()
+                .logoutSuccessHandler(logoutSuccessHandler)
+                .permitAll();
+
+        http.exceptionHandling().accessDeniedHandler(accessDeniedHandler);
+//  http.authorizeRequests().anyRequest().access("@permissionService.hasPermission(authentication,request)");
+    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService());
-//          auth
-//                .inMemoryAuthentication()
-//                .withUser("user").password(passwordEncoder().encode("123456")).authorities("/**")
-//                .and()
-//                .withUser("admin").password(passwordEncoder().encode("123456")).authorities("/**");
-//    }
+        auth.userDetailsService(userDetailsService())
+                .passwordEncoder(passwordEncoder());
+        auth.authenticationProvider(provider);
     }
 }
