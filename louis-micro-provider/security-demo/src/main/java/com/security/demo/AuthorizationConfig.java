@@ -14,11 +14,11 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 @EnableAuthorizationServer
 public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
 //
-//    @Autowired
-//    private AuthenticationManager authenticationManager;
-//
-//    @Autowired
-//    private UserDetailsService userDetailsService;
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private UserDetailsService userDetailsService;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -28,16 +28,16 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
         clients
                 .inMemory()
                 .withClient("client")
-                .secret("client")
-                .authorizedGrantTypes("refresh_token", "password", "client_credentials","authorization_code")
+                .secret(passwordEncoder.encode("client"))
+                .authorizedGrantTypes("refresh_token", "password", "client_credentials", "authorization_code")
                 .redirectUris("http://www.baidu.com")
                 .scopes("webclient", "mobile");
     }
 
-//    @Override
-//    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-//      endpoints
-//        .authenticationManager(authenticationManager)
-//        .userDetailsService(userDetailsService);
-//    }
+    @Override
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+      endpoints
+        .authenticationManager(authenticationManager)
+        .userDetailsService(userDetailsService);
+    }
 }

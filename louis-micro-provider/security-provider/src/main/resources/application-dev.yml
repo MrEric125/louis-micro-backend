@@ -23,6 +23,7 @@ logging:
   level:
     org:
       springframework.security: DEBUG
+      springframework.security.web.util.matcher: INFO
 registry:
   default:
     password: registry

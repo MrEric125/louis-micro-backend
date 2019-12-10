@@ -1,5 +1,6 @@
 package com.micro.gateway.filter;
 
+import com.alibaba.fastjson.JSON;
 import com.louis.core.utils.PublicUtil;
 import com.louis.core.utils.RequestUtil;
 import com.louis.exception.BusinessException;
@@ -17,7 +18,9 @@ import org.springframework.security.oauth2.provider.OAuth2Request;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -94,14 +97,20 @@ public class AuthHeaderFilter extends ZuulFilter {
         OAuth2Authentication oAuth2Authentication = (OAuth2Authentication) authentication;
         Authentication userAuthentication = oAuth2Authentication.getUserAuthentication();
 
-        String name = userAuthentication.getName();
 //        取出用户权限
         List<String> authority = userAuthentication.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
 
         OAuth2Request oAuth2Request = oAuth2Authentication.getOAuth2Request();
 
-        return null;
+        Map<String, String> requestParameters = oAuth2Request.getRequestParameters();
 
+        Map<String,Object> jsonToken = new HashMap<>(requestParameters);
+        if (userAuthentication != null){
+            jsonToken.put("principal",userAuthentication.getName());
+            jsonToken.put("authorities",authority);
+        }
+        currentContext.addZuulRequestHeader("json-token", JSON.toJSONString(jsonToken));
+        return null;
 
     }
 }
