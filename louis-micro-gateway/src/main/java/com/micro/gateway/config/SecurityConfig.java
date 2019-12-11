@@ -12,20 +12,11 @@
 // */
 //@Configuration
 //public class SecurityConfig extends WebSecurityConfigurerAdapter {
-////
-////    @Bean
-////    public JwtTokenStore jwtTokenStore() {
-////        return new JwtTokenStore(jwtAccessTokenConverter());
-////    }
-////    @Bean
-////    public JwtAccessTokenConverter jwtAccessTokenConverter() {
-////        JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-////        converter.setSigningKey("louismicro");
-////        return converter;
-////    }
+//
 //
 //    @Override
 //    protected void configure(HttpSecurity http) throws Exception {
 //        http.csrf().disable();
+//        http.authorizeRequests().antMatchers("/**").permitAll();
 //    }
 //}

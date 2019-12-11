@@ -6,14 +6,15 @@ security:
   oauth2:
     resource:
       prefer-token-info: true
-      user-info-uri: http://localhost:9311/user
+      user-info-uri: http://localhost:9312/user
+      token-info-uri: http://localhost:9312/token/check_token
     client:
-      access-token-uri: http://localhost:9311/oauth/token
-      user-authorization-uri: http://localhost:9311/oauth/authorize
+      access-token-uri: http://localhost:9312/oauth/token
+      user-authorization-uri: http://localhost:9312/oauth/authorize
       client-id: client
       grant-type: authorization_code,password
       scope: webclient
-      registered-redirect-uri: http://localhost:9311/user
+      registered-redirect-uri: http://localhost:9312/user
 
 ribbon:
   eureka:

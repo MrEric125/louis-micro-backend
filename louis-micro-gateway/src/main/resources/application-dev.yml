@@ -37,10 +37,12 @@ zuul:
     order-route:
       serviceId: order-service-A
       path: /order/**
+    security-demo-route:
+      serviceId: security-service-Demo
+      path: /demo/**
   retryable: true
-  ignored-services: *
   add-host-header: true
-  sensitive-headers: *
+
 
 proxy:
   auth:

@@ -15,27 +15,27 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 @Configuration
 public class ResourceConfig  {
 
-    /**
-     * uaa资源服务
-     */
-    @Configuration
-    @EnableResourceServer
-    public class UAAServiceConfig extends ResourceServerConfigurerAdapter {
-        @Autowired
-        private TokenStore tokenStore;
-
-
-
-
-    }
-
-    /**
-     * order资源服务
-     */
-    @Configuration
-    @EnableResourceServer
-    public class OrderServiceConfig extends ResourceServerConfigurerAdapter {
-
-    }
+//    /**
+//     * uaa资源服务
+//     */
+//    @Configuration
+//    @EnableResourceServer
+//    public class UAAServiceConfig extends ResourceServerConfigurerAdapter {
+////        @Autowired
+////        private TokenStore tokenStore;
+//
+//
+//
+//
+//    }
+//
+//    /**
+//     * order资源服务
+//     */
+//    @Configuration
+//    @EnableResourceServer
+//    public class OrderServiceConfig extends ResourceServerConfigurerAdapter {
+//
+//    }
 
 }
