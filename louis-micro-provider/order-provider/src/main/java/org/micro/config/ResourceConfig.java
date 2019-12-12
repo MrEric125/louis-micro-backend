@@ -14,6 +14,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.RemoteTokenServices;
 import org.springframework.security.oauth2.provider.token.ResourceServerTokenServices;
+import org.springframework.security.oauth2.provider.token.TokenStore;
 
 
 /**
@@ -26,49 +27,29 @@ import org.springframework.security.oauth2.provider.token.ResourceServerTokenSer
 public class ResourceConfig extends ResourceServerConfigurerAdapter {
 
 
-    public static final String RESOURCE_ID = "order";
+    public static final String RESOURCE_ID = "res1";
 
     @Autowired
-    DiscoveryClient discoveryClient;
-
-    /**
-     * 不用zuul做路由的时候可以使用这种方式来配合授权中心和资源中心的数据是匹配的
-     * 如果用了网关就不需要这种方式了
-     * @return
-     */
-    @Bean
-    public ResourceServerTokenServices tokenServices() {
-        RemoteTokenServices remoteTokenServices = new RemoteTokenServices();
-//        List<ServiceInstance> instances = discoveryClient.getInstances("security-service-A");
-//        String securityUri = "";
-//        if (CollectionUtils.isNotEmpty(instances)) {
-//            securityUri = instances.get(0).getUri().toASCIIString();
-//        }
-        remoteTokenServices.setCheckTokenEndpointUrl("http://localhost:9311/oauth/check_token");
-        log.info("==========get security uri===============");
-//        log.info(" security uri ===>{}", securityUri);
-        remoteTokenServices.setClientId("client");
-        remoteTokenServices.setClientSecret("secret");
-        return remoteTokenServices;
-    }
+    TokenStore tokenStore;
 
     @Override
-    public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-        resources.resourceId(RESOURCE_ID)
-                .tokenServices(tokenServices())
+    public void configure(ResourceServerSecurityConfigurer resources) {
+        resources.resourceId(RESOURCE_ID)//资源 id
+                .tokenStore(tokenStore)
+//                .tokenServices(tokenService())//验证令牌的服务
                 .stateless(true);
     }
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
+
         http
                 .authorizeRequests()
-                .antMatchers("/**").access("#oauth2.hasAnyScope('webclient')")
-                .and()
-                .csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-        ;
+                .antMatchers("/**").access("#oauth2.hasScope('ROLE_ADMIN')")
+                .and().csrf().disable()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
+
 
 
 

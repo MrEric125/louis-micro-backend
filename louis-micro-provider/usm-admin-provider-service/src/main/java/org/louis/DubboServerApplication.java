@@ -1,6 +1,7 @@
-package org;
+package org.louis;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,12 +11,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * description:
  */
 @Slf4j
+@EnableDubbo
 @SpringBootApplication
-public class LouisApplication {
+public class DubboServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LouisApplication.class, args);
+        SpringApplication.run(DubboServerApplication.class, args);
 
 
     }
 }
+
+

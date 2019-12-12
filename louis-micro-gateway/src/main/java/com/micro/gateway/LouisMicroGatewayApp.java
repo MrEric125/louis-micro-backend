@@ -18,7 +18,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  */
 @SpringCloudApplication
 @EnableZuulProxy
-@EnableOAuth2Sso
+//@EnableOAuth2Sso
 @EnableHystrix
 public class LouisMicroGatewayApp {
 

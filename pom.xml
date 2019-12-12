@@ -20,7 +20,7 @@
         <module>dependencies</module>
         <module>louis-micro-provider</module>
         <module>business</module>
-        <module>server</module>
+        <module>consumer</module>
         <module>louis-micro-common</module>
         <module>louis-micro-eureka</module>
         <module>louis-micro-gateway</module>
