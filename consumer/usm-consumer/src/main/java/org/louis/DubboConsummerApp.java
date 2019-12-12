@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 //@SpringBootApplication
 @RestController
 @EnableAutoConfiguration
-public class DubboApp {
+public class DubboConsummerApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(DubboApp.class,args);
+        SpringApplication.run(DubboConsummerApp.class,args);
     }
 
     @Reference(version = "1.0.0")
@@ -29,7 +29,9 @@ public class DubboApp {
 
     @RequestMapping("/consumer")
     public String consumer() {
-        return demoService.sayHello("Louis");
+        String returnMessage = demoService.sayHello("Louis");
+        log.info(returnMessage);
+        return returnMessage;
     }
 
 

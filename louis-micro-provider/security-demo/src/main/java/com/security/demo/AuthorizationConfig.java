@@ -1,24 +1,19 @@
 package com.security.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
 @Configuration
-//@EnableResourceServer
 @EnableAuthorizationServer
 public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
-//
     @Autowired
     private AuthenticationManager authenticationManager;
 
@@ -36,7 +31,7 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
                 .withClient("client")
                 .secret(passwordEncoder.encode("client"))
                     .authorizedGrantTypes("refresh_token", "password", "client_credentials", "authorization_code")
-                .redirectUris("http://localhost:8981/login")
+                .redirectUris("http://www.baidu.com")
                 .scopes("webclient", "mobile");
 
     }
