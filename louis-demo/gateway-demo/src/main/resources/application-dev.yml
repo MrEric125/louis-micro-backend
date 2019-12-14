@@ -1,0 +1,48 @@
+eureka:
+  instance:
+    prefer-ip-address: false
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: gatway-server-A
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+
+  datasource:
+    platform: MYSQL
+    url: jdbc:mysql://localhost:3306/spring_cloud?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: Root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8981
+zuul:
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  routes:
+
+    #    权限认证
+    security-route:
+      serviceId: security-service
+      path: /uas/**  # 通过这个路径路由到order-service-a这个服务的根路径
+    resource-route:
+      serviceId: resource-service
+      path: /resource/**
+  retryable: true
+  add-host-header: true
+
+
+proxy:
+  auth:
+    routes:
+      security-route: oauth2
+
