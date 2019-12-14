@@ -159,13 +159,22 @@
             <artifactId>kafka_2.12</artifactId>
         </dependency>
 
-
-
         <!--        其他相关依赖-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+            <version>2.6.1</version>
         </dependency>
         <dependency>
             <groupId>org.louis.micro</groupId>

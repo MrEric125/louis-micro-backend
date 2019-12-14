@@ -24,6 +24,7 @@
         <module>louis-micro-common</module>
         <module>louis-micro-eureka</module>
         <module>louis-micro-gateway</module>
+        <module>louis-demo</module>
     </modules>
 
     <properties>

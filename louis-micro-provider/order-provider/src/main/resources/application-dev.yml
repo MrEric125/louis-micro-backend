@@ -27,3 +27,9 @@ registry:
     password: registry
     email: lj125999@163.com
     phone: 13163780125
+security:
+  oauth2:
+    resource:
+      id: order
+      user-info-uri: http://localhost:9312/user
+      prefer-token-info: false

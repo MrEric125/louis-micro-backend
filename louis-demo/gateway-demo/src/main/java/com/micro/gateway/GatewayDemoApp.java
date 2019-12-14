@@ -23,10 +23,10 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableOAuth2Sso
 //@EnableHystrix
 @RestController
-public class LouisMicroGatewayApp {
+public class GatewayDemoApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(LouisMicroGatewayApp.class, args);
+        SpringApplication.run(GatewayDemoApp.class, args);
     }
 
     @RequestMapping("/")

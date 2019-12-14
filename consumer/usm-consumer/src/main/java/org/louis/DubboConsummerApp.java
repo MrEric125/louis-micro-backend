@@ -29,6 +29,7 @@ public class DubboConsummerApp {
 
     @RequestMapping("/consumer")
     public String consumer() {
+
         String returnMessage = demoService.sayHello("Louis");
         log.info(returnMessage);
         return returnMessage;

@@ -1,6 +1,5 @@
 package com.micro.gateway.config;
 
-import com.micro.gateway.filter.AuthFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,6 +7,7 @@ import org.springframework.core.Ordered;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+import sun.net.httpserver.AuthFilter;
 
 /**
  * @author Administrator
@@ -16,10 +16,10 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class ZuulConfig {
 
-    @Bean
-    public AuthFilter preFileter() {
-        return new AuthFilter();
-    }
+//    @Bean
+//    public AuthFilter preFileter() {
+//        return new AuthFilter();
+//    }
 
     /**
      * 允许跨域问题
