@@ -69,7 +69,7 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
                 .withClient("client")
                 .secret(passwordEncoder.encode("client"))
                     .authorizedGrantTypes("refresh_token", "password", "client_credentials", "authorization_code")
-                .redirectUris("http://www.baidu.com")
+                .redirectUris("http://localhost:8080/login")
                 .scopes("webclient", "mobile");
 
     }

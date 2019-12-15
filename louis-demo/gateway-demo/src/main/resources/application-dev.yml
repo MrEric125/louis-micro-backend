@@ -23,7 +23,7 @@ spring:
     password: Root
     driver-class-name: com.mysql.cj.jdbc.Driver
 server:
-  port: 8981
+  port: 8080
 zuul:
   host:
     connect-timeout-millis: 20000
@@ -33,7 +33,7 @@ zuul:
     #    权限认证
     security-route:
       serviceId: security-service
-      path: /uas/**  # 通过这个路径路由到order-service-a这个服务的根路径
+      path: /uaa/**  # 通过这个路径路由到order-service-a这个服务的根路径
     resource-route:
       serviceId: resource-service
       path: /resource/**
@@ -41,8 +41,8 @@ zuul:
   add-host-header: true
 
 
-proxy:
-  auth:
-    routes:
-      security-route: oauth2
+#proxy:
+#  auth:
+#    routes:
+#      security-route: oauth2
 

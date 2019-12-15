@@ -30,7 +30,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
 server:
-  port: 9319
+  port: 8082
 logging:
   level:
     org:
@@ -39,6 +39,6 @@ logging:
 security:
   oauth2:
     resource:
-      id: order
-      user-info-uri: http://localhost:8981/usa/user
+      id: resource
+      user-info-uri: http://localhost:8081/uaa/current
       prefer-token-info: false

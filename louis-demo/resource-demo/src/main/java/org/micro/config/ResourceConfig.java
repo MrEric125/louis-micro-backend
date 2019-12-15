@@ -27,16 +27,22 @@ public class ResourceConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable()
-                .exceptionHandling()
-                .authenticationEntryPoint((request, response, authException) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED))
-                .and()
-                .requestMatchers().antMatchers("/api/**")
-                .and()
+//                配置需要权限的url
                 .authorizeRequests()
-                .antMatchers("/api/**").authenticated()
-                .and()
-                .httpBasic();
+                .anyRequest().authenticated()
+                .and().csrf().disable();
+
+//        http
+//                .csrf().disable()
+//                .exceptionHandling()
+//                .authenticationEntryPoint((request, response, authException) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED))
+//                .and()
+//                .requestMatchers().antMatchers("/api/**")
+//                .and()
+//                .authorizeRequests()
+//                .antMatchers("/api/**").authenticated()
+//                .and()
+//                .httpBasic();
     }
 
 

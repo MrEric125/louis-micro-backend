@@ -20,7 +20,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable();
+
+        http
+                //需要授权的url
+                .authorizeRequests()
+                .antMatchers("/login").permitAll()
+                .anyRequest().authenticated()
+                .and().csrf().disable()
+        ;
+        super.configure(http);
+
 //        http.authorizeRequests().antMatchers("/**").permitAll();
     }
 }
