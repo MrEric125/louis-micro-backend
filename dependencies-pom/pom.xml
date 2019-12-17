@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.louis.micro</groupId>
-    <artifactId>dependencies</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>dependencies-pom</artifactId>
+    <version>${revision}</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -24,6 +24,8 @@
 
         <!-- Ali Cloud -->
         <aliyun-sdk-oss.version>3.6.0</aliyun-sdk-oss.version>
+
+        <revision>1.0.0-SNAPSHOT</revision>
     </properties>
 
     <licenses>

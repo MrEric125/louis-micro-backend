@@ -41,8 +41,8 @@ zuul:
   add-host-header: true
 
 
-#proxy:
-#  auth:
-#    routes:
-#      security-route: oauth2
+proxy:
+  auth:
+    routes:
+      security-route: oauth2
 
