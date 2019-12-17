@@ -7,7 +7,7 @@ security:
     resource:
 #      prefer-token-info: true
       user-info-uri: ${security-service}/user
-      token-info-uri:  ${security-service}/token/check_token
+#      token-info-uri:  ${security-service}/token/check_token
     client:
       access-token-uri: ${security-service}/oauth/token
       user-authorization-uri: ${security-service}/oauth/authorize

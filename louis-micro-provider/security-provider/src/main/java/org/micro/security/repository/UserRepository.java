@@ -1,6 +1,6 @@
 package org.micro.security.repository;
 
-import com.louis.core.repository.BaseRepository;
+import org.micro.base.repository.BaseRepository;
 import org.micro.security.entity.SysUser;
 import org.springframework.stereotype.Repository;
 

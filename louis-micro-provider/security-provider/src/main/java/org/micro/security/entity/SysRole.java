@@ -1,8 +1,8 @@
 package org.micro.security.entity;
 
-import com.louis.core.entity.BaseEntity;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
+import org.micro.base.entity.BaseEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

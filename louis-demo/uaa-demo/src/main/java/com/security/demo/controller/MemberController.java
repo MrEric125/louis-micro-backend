@@ -1,7 +1,7 @@
 package com.security.demo.controller;
 
-import com.louis.common.api.wrapper.WrapMapper;
-import com.louis.common.api.wrapper.Wrapper;
+import org.micro.common.api.wrapper.WrapMapper;
+import org.micro.common.api.wrapper.Wrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.provider.token.ConsumerTokenServices;
 import org.springframework.web.bind.annotation.DeleteMapping;

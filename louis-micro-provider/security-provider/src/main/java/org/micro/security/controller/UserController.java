@@ -1,8 +1,8 @@
 package org.micro.security.controller;
 
 import com.google.common.collect.Maps;
-import com.louis.common.api.wrapper.WrapMapper;
-import com.louis.common.api.wrapper.Wrapper;
+import org.micro.common.api.wrapper.WrapMapper;
+import org.micro.common.api.wrapper.Wrapper;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;

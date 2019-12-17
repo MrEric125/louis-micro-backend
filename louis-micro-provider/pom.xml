@@ -32,7 +32,6 @@
         <module>usm-admin-provider-service</module>
         <module>security-provider</module>
         <module>order-provider</module>
-        <module>security-demo</module>
     </modules>
     <dependencies>
 
