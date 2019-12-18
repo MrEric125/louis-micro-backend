@@ -16,6 +16,8 @@
         <module>common-security</module>
         <module>common-web</module>
         <module>common-micro-web</module>
+        <module>common-core</module>
+        <module>common-api</module>
     </modules>
 
 

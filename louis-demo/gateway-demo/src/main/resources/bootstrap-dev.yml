@@ -1,16 +1,16 @@
 
 # 设置一个公共的前缀
 #  prefix: /api
-gataway-service: http://localhost:8080
+security-service: http://localhost:8081
 security:
   oauth2:
     resource:
 #      prefer-token-info: true
-      user-info-uri: ${gataway-service}/uaa/user/current
-      token-info-uri:  ${gataway-service}/uaa/token/check_token
+      user-info-uri: ${security-service}/user
+#      token-info-uri:  ${security-service}/token/check_token
     client:
-      access-token-uri: ${gataway-service}/uaa/oauth/token
-      user-authorization-uri: ${gataway-service}/uaa/oauth/authorize
+      access-token-uri: ${security-service}/oauth/token
+      user-authorization-uri: ${security-service}/oauth/authorize
       client-id: client
       grant-type: authorization_code,password
       scope: webclient

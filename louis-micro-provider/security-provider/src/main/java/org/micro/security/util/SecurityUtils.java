@@ -1,7 +1,7 @@
 package org.micro.security.util;
 
+import com.google.common.collect.Lists;
 import lombok.NoArgsConstructor;
-import org.assertj.core.util.Lists;
 import org.micro.security.entity.UserAction;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;

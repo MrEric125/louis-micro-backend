@@ -1,6 +1,6 @@
 package org.micro.security.devdata;
 
-import org.assertj.core.util.Lists;
+import com.google.common.collect.Lists;
 import org.micro.security.entity.*;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -44,21 +44,21 @@ public class DevDataAutoCreate {
         GrandType refreshToken = GrandType.builder().value("refresh_token").build();
         return Lists.newArrayList(password, authorizationCode, refreshToken);
     }
-    public static List<ClientDetailEntity> loadClientDetails() {
-        ClientDetailEntity clientDetail = ClientDetailEntity.builder()
-                .clientId("louis")
-                .clientSecret("123456")
-                .scope("webclient")
-                .redirectUrl("http://baidu.com")
-                .build();
-        ClientDetailEntity clientDetail2 = ClientDetailEntity.builder()
-                .clientId("client")
-                .clientSecret("123456")
-                .scope("webclient")
-                .redirectUrl("http://baidu.com")
-                .build();
-        return Lists.newArrayList(clientDetail, clientDetail2);
-    }
+//    public static List<ClientDetailEntity> loadClientDetails() {
+//        ClientDetailEntity clientDetail = ClientDetailEntity.builder()
+//                .clientId("louis")
+//                .clientSecret("123456")
+//                .scope("webclient")
+//                .redirectUrl("http://baidu.com")
+//                .build();
+//        ClientDetailEntity clientDetail2 = ClientDetailEntity.builder()
+//                .clientId("client")
+//                .clientSecret("123456")
+//                .scope("webclient")
+//                .redirectUrl("http://baidu.com")
+//                .build();
+//        return Lists.newArrayList(clientDetail, clientDetail2);
+//    }
     public List<ScopeEntity> loadScope() {
         ScopeEntity scopeEntity = ScopeEntity.builder().scopeValue("webclient").build();
         return Lists.newArrayList(scopeEntity);

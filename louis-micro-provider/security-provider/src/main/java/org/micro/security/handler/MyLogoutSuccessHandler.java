@@ -1,8 +1,8 @@
 package org.micro.security.handler;
 
 import com.alibaba.fastjson.JSON;
-import com.louis.common.api.wrapper.WrapMapper;
-import com.louis.common.api.wrapper.Wrapper;
+import org.micro.common.api.wrapper.WrapMapper;
+import org.micro.common.api.wrapper.Wrapper;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;

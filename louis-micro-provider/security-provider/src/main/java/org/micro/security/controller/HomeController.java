@@ -1,7 +1,7 @@
 package org.micro.security.controller;
 
-import com.louis.common.api.wrapper.WrapMapper;
-import com.louis.common.api.wrapper.Wrapper;
+import org.micro.common.api.wrapper.WrapMapper;
+import org.micro.common.api.wrapper.Wrapper;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

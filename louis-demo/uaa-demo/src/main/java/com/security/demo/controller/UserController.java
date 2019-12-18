@@ -31,31 +31,33 @@ public class UserController {
         return member;
     }
 
-        @RequestMapping(value = { "/current" }, produces = "application/json")
-    public Map<String, Object> user() {
-        Map<String, Object> userInfo = Maps.newHashMap();
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//    @RequestMapping(value = {"/current"}, produces = "application/json")
+//    public Map<String, Object> user(Principal principal) {
+//
+//        Map<String, Object> userInfo = Maps.newHashMap();
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//
+//
+//        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+//
+//
+//        String header = request.getHeader("Authorization");
+//
+//        userInfo.put("header", header);
+//
+//        if (authentication instanceof OAuth2Authentication) {
+//            OAuth2Authentication oAuth2Authentication = (OAuth2Authentication) authentication;
+//            Authentication userAuthentication = oAuth2Authentication.getUserAuthentication();
+//            List<String> authorities = userAuthentication.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
+//
+//            userInfo.put("user", authentication.getPrincipal());
+//            userInfo.put("authrities", authorities);
+//            return userInfo;
+//        }
+//        userInfo.put("user", authentication.getPrincipal());
+//        userInfo.put("authrities", authentication.getAuthorities());
+//        return userInfo;
 
-
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-
-
-        String header = request.getHeader("Authorization");
-
-        userInfo.put("header", header);
-
-        if (authentication instanceof OAuth2Authentication) {
-            OAuth2Authentication oAuth2Authentication = (OAuth2Authentication) authentication;
-            Authentication userAuthentication = oAuth2Authentication.getUserAuthentication();
-            List<String> authorities = userAuthentication.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
-
-            userInfo.put("user", authentication.getPrincipal());
-            userInfo.put("authrities", authorities);
-            return userInfo;
-        }
-        userInfo.put("user", authentication.getPrincipal());
-        userInfo.put("authrities", authentication.getAuthorities());
-        return userInfo;
-    }
+//    }
 
 }

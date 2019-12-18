@@ -1,10 +1,8 @@
 package org.micro;
 
-import com.louis.core.repository.SimpleBaseRepository;
 import org.louis.micro.MicroServiceClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 /**
  * @author louis
@@ -12,7 +10,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
  * Date: 2019/12/4
  * Description:
  */
-@EnableJpaRepositories(repositoryBaseClass = SimpleBaseRepository.class)
+//@EnableJpaRepositories(repositoryBaseClass = SimpleBaseRepository.class)
+@EnableJpaRepositories
 @MicroServiceClient
 public class MicroSecurityApp {
 
