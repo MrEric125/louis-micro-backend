@@ -1,6 +1,6 @@
 package org.micro.security.service.impl;
 
-import org.micro.security.entity.SysRole;
+import org.micro.security.SysRole;
 import org.micro.security.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

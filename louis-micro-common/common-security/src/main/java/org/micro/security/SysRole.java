@@ -1,4 +1,4 @@
-package org.micro.security.entity;
+package org.micro.security;
 
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;

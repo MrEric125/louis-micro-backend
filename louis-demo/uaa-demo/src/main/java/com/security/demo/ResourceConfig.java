@@ -1,5 +1,6 @@
 package com.security.demo;
 
+import org.micro.security.Constants;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -22,8 +23,8 @@ public class ResourceConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-//        http
-//                .csrf().disable()
+        http
+                .csrf().disable();
 //                .exceptionHandling()
 //                .authenticationEntryPoint((request, response, authException) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED))
 //                .and()
@@ -33,7 +34,9 @@ public class ResourceConfig extends ResourceServerConfigurerAdapter {
 //                .antMatchers("/api/**").authenticated()
 //                .and()
 //                .httpBasic();
-        http.antMatcher("/user/**").authorizeRequests().anyRequest().authenticated();
+        http.authorizeRequests().antMatchers(Constants.LOGINPAGE).permitAll();
+        http.authorizeRequests().anyRequest().authenticated();
+        super.configure(http);
     }
 
     /**

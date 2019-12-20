@@ -1,6 +1,7 @@
 package org.micro.security.devdata;
 
 import com.google.common.collect.Lists;
+import org.micro.security.SysRole;
 import org.micro.security.entity.*;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;

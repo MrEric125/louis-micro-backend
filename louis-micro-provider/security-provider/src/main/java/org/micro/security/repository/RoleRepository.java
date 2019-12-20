@@ -1,7 +1,7 @@
 package org.micro.security.repository;
 
 import org.micro.base.repository.BaseRepository;
-import org.micro.security.entity.SysRole;
+import org.micro.security.SysRole;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
