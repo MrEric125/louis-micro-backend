@@ -16,6 +16,9 @@
         <module>gateway-demo</module>
         <module>uaa-demo</module>
         <module>resource-demo</module>
+        <module>feign-server1</module>
+        <module>feign-server2</module>
+        <module>feign-api</module>
     </modules>
 
 

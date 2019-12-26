@@ -21,6 +21,11 @@
             <artifactId>common-micro-web</artifactId>
             <version>${revision}</version>
         </dependency>
+        <dependency>
+            <groupId>org.louis.micro</groupId>
+            <artifactId>common-security</artifactId>
+            <version>${revision}</version>
+        </dependency>
     </dependencies>
 
 

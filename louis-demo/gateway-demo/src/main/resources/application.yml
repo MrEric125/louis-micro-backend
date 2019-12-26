@@ -5,7 +5,7 @@
 
 # 设置一个公共的前缀
 #  prefix: /api
-#gataway-service: http://localhost:8080
+gataway-service: http://localhost:8080
 security:
   oauth2:
     resource:
