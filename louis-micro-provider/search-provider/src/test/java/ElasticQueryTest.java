@@ -1,9 +1,13 @@
+import org.apache.lucene.search.Query;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.query.QueryShardContext;
+import org.elasticsearch.index.query.TermsQueryBuilder;
 import org.elasticsearch.search.SearchHits;
 
+import java.io.IOException;
 import java.util.Map;
 
 /**
@@ -40,9 +44,6 @@ public class ElasticQueryTest {
 
 
         });
-
-
-
     }
 
 
