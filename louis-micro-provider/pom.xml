@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>louis-micro-backend</artifactId>
+        <groupId>org.louis.micro</groupId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>louis-micro-provider</artifactId>
+    <packaging>pom</packaging>
+    <version>${revision}</version>
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>liujun</id>
+            <name>louis</name>
+            <email>lj125999@163.com</email>
+        </developer>
+    </developers>
+    <modules>
+        <module>usm-admin-provider-api</module>
+        <module>usm-admin-provider-service</module>
+        <module>security-provider</module>
+        <module>order-provider</module>
+        <module>search-provider</module>
+    </modules>
+    <dependencies>
+
+
+    </dependencies>
+
+
+
+</project>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>louis-micro-backend</artifactId>
+        <groupId>org.louis.micro</groupId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>louis-demo</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>gateway-demo</module>
+        <module>uaa-demo</module>
+        <module>resource-demo</module>
+        <module>feign-server1</module>
+        <module>feign-server2</module>
+        <module>feign-api</module>
+    </modules>
+
+
+</project>

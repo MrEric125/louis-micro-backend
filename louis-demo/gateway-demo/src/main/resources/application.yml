@@ -1,0 +1,80 @@
+
+
+
+
+
+# 设置一个公共的前缀
+#  prefix: /api
+gataway-service: http://localhost:8080
+security:
+  oauth2:
+    resource:
+      #      prefer-token-info: true
+      user-info-uri: ${gataway-service}/uaa/user/current
+      token-info-uri:  ${gataway-service}/uaa/token/check_token
+    client:
+      access-token-uri: ${gataway-service}/uaa/oauth/token
+      user-authorization-uri: ${gataway-service}/uaa/oauth/authorize
+      client-id: client
+      grant-type: authorization_code,password
+      scope: webclient
+#      registered-redirect-uri: http://localhost:9312/user
+
+ribbon:
+  eureka:
+    enabled: true
+
+
+eureka:
+  instance:
+    prefer-ip-address: false
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  #配置配置中心
+  profiles:
+    active: dev
+  application:
+    name: gatway-server-A
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+
+  datasource:
+    platform: MYSQL
+    url: jdbc:mysql://localhost:3306/spring_cloud?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: Root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 8080
+zuul:
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  routes:
+
+    #    权限认证
+    security-route:
+      serviceId: security-service
+      path: /uaa/**  # 通过这个路径路由到order-service-a这个服务的根路径
+    resource-route:
+      serviceId: resource-service
+      path: /resource/**
+  retryable: true
+  add-host-header: true
+
+proxy:
+  auth:
+    routes:
+      security-route: oauth2
+
+

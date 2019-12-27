@@ -1,0 +1,11 @@
+
+#配置配置中心
+spring:
+  cloud:
+    config:
+      profile: dev
+      uri: http://localhost:8871
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
