@@ -38,6 +38,7 @@ public class EsInitDemo {
     @Before
     public void before() {
         try {
+            settings = Settings.builder().put("cluster.name", "docker-cluster").build();
             client = new PreBuiltTransportClient(settings)
                     .addTransportAddress(new TransportAddress
                             (InetAddress.getByName("localhost"), 9300));
@@ -149,11 +150,11 @@ public class EsInitDemo {
 
             try {
                 String string = objectMapper.writeValueAsString(article);
-                System.out.println(string);
                 client.prepareIndex().setIndex(INDEX)
                         .setType("license")
                         .setId(String.valueOf(id))
                         .setSource(string, XContentType.JSON).get();
+                System.out.println(string);
 //                Thread.sleep();
 
 

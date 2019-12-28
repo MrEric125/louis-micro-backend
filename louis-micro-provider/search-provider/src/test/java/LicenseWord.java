@@ -34,7 +34,7 @@ public class LicenseWord {
     public void initList(String fileName) {
         if (StringUtils.isEmpty(fileName)) {
 
-            fileName = "F:/louis/louis-micro-backend/LICENSE";
+            fileName = "D:/workspace/IntelliJ Idea/source/louis-micro-backend/LICENSE";
         }
         RandomAccessFile accessFile = null;
         try {
