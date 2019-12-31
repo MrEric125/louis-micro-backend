@@ -1,9 +1,9 @@
-package org.micro.provider.controller;
+package org.micro.search.controller;
 
 import org.micro.common.api.wrapper.WrapMapper;
 import org.micro.common.api.wrapper.Wrapper;
-import org.micro.provider.entity.OrderEs;
-import org.micro.provider.repository.OrderEsRepository;
+import org.micro.search.entity.OrderEs;
+import org.micro.search.repository.OrderEsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;

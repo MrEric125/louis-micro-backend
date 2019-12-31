@@ -1,4 +1,4 @@
-package org.micro.provider.entity;
+package org.micro.search.entity;
 
 import lombok.Data;
 import org.springframework.data.elasticsearch.annotations.Document;

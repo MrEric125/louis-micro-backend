@@ -1,6 +1,6 @@
-package org.micro.provider.repository;
+package org.micro.search.repository;
 
-import org.micro.provider.entity.OrderEs;
+import org.micro.search.entity.OrderEs;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 /**

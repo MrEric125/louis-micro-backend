@@ -1,4 +1,4 @@
-package org.micro.provider;
+package org.micro.search;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
