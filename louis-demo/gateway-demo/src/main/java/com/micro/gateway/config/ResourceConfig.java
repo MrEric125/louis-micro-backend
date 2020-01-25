@@ -12,7 +12,7 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 
 /**
  * @author John·Louis
- * @date create in 2019/12/7
+ *  create at 2019/12/7
  * description:
  * zuul 模块一定需要有这个配置
  */

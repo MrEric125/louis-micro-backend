@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @author John·Louis
- * @date create in 2019/7/9
+ *  create at 2019/7/9
  * description:
  */
 public class LicenseWord {

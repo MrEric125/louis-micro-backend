@@ -20,7 +20,8 @@ import java.util.List;
 
 /**
  * @author John·Louis
- * @date create in 2019/12/23
+ * created on  2020/1/25
+ *
  * description:
  */
 @RestController
@@ -32,10 +33,11 @@ public class CommonController  {
 
     @RequestMapping("/search/{searchWorld}")
     public Wrapper search(@PathVariable String searchWorld) {
-        QueryBuilder queryBuilder = QueryBuilders.queryStringQuery(searchWorld);
+
+        QueryBuilder builder = QueryBuilders.queryStringQuery(searchWorld);
 //        NativeSearchQuery query = new NativeSearchQuery(matchAllQuery);
         NativeSearchQuery query = new NativeSearchQueryBuilder()
-                .withQuery(queryBuilder)
+                .withQuery(builder)
                 .withPageable(PageRequest.of(0, 10))
                 .build();
         List<Article> articleList = elasticsearchTemplate.queryForList(query, Article.class);

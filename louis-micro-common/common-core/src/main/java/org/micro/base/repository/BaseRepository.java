@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * @author John·Louis
- * @date create in 2019/12/17
+ *  create at 2019/12/17
  * description:
  */
 @NoRepositoryBean

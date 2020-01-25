@@ -6,7 +6,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author John·Louis
- * @date create in 2019/9/15
+ *  create at 2019/9/15
  * description:
  */
 @Configuration
