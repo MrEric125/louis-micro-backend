@@ -4,17 +4,26 @@ package org.micro.common.api.wrapper;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.Optional;
+
 /**
  * The class Wrap mapper.
  *
  * @author John·Louis
  */
-public class WrapMapper {
+public class MapperWrap {
 
 	/**
 	 * Instantiates a new wrap mapper.
 	 */
-	private WrapMapper() {
+	private MapperWrap() {
+	}
+
+
+	public static <E> Wrapper<E> nonullWrap(E e) {
+		return Optional.ofNullable(e)
+				.map(entity -> wrap(WrapperMassage.SUCCESS_CODE, WrapperMassage.SUCCESS_MESSAGE, entity))
+				.orElseGet(() -> wrap(WrapperMassage.NOT_FOUND, WrapperMassage.NOTFOUND_MESSAGE));
 	}
 
 	/**
@@ -123,10 +132,6 @@ public class WrapMapper {
 
 	/**
 	 *
-	 * @param code
-	 * @param message
-	 * @param <E>
-	 * @return
 	 */
 	public static <E> Wrapper<E> error(int code, String message) {
 		return  wrap(code, StringUtils.isBlank(message) ? WrapperMassage.ERROR_MESSAGE : message);

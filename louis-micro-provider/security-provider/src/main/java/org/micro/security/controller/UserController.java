@@ -1,7 +1,7 @@
 package org.micro.security.controller;
 
 import com.google.common.collect.Maps;
-import org.micro.common.api.wrapper.WrapMapper;
+import org.micro.common.api.wrapper.MapperWrap;
 import org.micro.common.api.wrapper.Wrapper;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -46,11 +46,11 @@ public class UserController {
 
             userInfo.put("user", authentication.getPrincipal());
             userInfo.put("authrities", authorities);
-            return WrapMapper.wrap(userInfo);
+            return MapperWrap.wrap(userInfo);
         }
         userInfo.put("user", authentication.getPrincipal());
         userInfo.put("authrities", authentication.getAuthorities());
-        return WrapMapper.wrap(userInfo);
+        return MapperWrap.wrap(userInfo);
 
 
     }

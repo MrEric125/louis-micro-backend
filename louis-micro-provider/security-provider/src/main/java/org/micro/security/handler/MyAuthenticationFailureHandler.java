@@ -1,7 +1,7 @@
 package org.micro.security.handler;
 
 import com.alibaba.fastjson.JSON;
-import org.micro.common.api.wrapper.WrapMapper;
+import org.micro.common.api.wrapper.MapperWrap;
 import org.micro.common.api.wrapper.Wrapper;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.AuthenticationException;
@@ -21,7 +21,7 @@ public class MyAuthenticationFailureHandler implements AuthenticationFailureHand
     @Override
     public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
 
-        Wrapper result = WrapMapper.error(e.getMessage());
+        Wrapper result = MapperWrap.error(e.getMessage());
         httpServletResponse.setCharacterEncoding("utf-8");
         httpServletResponse.setContentType("application/json;charset=utf-8");
         httpServletResponse.getWriter().write(JSON.toJSONString(result));

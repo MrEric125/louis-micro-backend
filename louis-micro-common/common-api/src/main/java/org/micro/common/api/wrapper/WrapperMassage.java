@@ -19,10 +19,19 @@ public class WrapperMassage implements Serializable {
      */
     public static final String SUCCESS_MESSAGE = "success";
 
+
+
     /**
      * 错误码.
      */
     public static final int ERROR_CODE = 400;
+
+    /**
+     * 成功信息.
+     */
+    public static final String NOTFOUND_MESSAGE = "you search not found";
+
+    public static final int NOT_FOUND = 404;
 
 
 

@@ -1,6 +1,6 @@
 package org.micro.security.controller;
 
-import org.micro.common.api.wrapper.WrapMapper;
+import org.micro.common.api.wrapper.MapperWrap;
 import org.micro.common.api.wrapper.Wrapper;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +17,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public Wrapper homePage() {
-        return WrapMapper.wrap("this is home");
+        return MapperWrap.wrap("this is home");
     }
 
 }
