@@ -3,6 +3,7 @@ package org.micro.provider.entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 /**
  * @author John·Louis
@@ -12,6 +13,7 @@ import lombok.Data;
 @Data
 @Builder
 @AllArgsConstructor
+@Document(indexName = "article")
 public class Article {
     private long id;
     private String content;

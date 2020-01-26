@@ -9,6 +9,5 @@ public class UnablePageException extends Exception {
 
     public UnablePageException(String s) {
         super(s);
-
     }
 }
