@@ -7,7 +7,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 
 /**
  * @author John·Louis
- *  create at 2019/12/26
+ *  created at 2019/12/26
  * description:
  */
 @Data

@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 
 /**
  * @author John·Louis
- *  create at 2019/12/21
+ *  created at 2019/12/21
  * description:
  */
 @MicroServiceClient

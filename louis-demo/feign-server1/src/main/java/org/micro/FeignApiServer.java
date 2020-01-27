@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * @author John·Louis
- *  create at 2019/12/21
+ *  created at 2019/12/21
  * description:
  */
 public class FeignApiServer implements FeignApi {

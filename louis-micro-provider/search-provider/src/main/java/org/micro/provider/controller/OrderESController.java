@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author John·Louis
- *  create at 2019/12/23
+ *  created at 2019/12/23
  * description:
  */
 @RestController

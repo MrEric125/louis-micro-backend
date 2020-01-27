@@ -2,7 +2,7 @@ package org.micro.security;
 
 /**
  * @author John·Louis
- *  create at 2019/12/14
+ *  created at 2019/12/14
  * description:
  */
 public interface Constants {

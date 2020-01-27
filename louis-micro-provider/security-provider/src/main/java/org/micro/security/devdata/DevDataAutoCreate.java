@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @author John·Louis
- *  create at 2019/11/30
+ *  created at 2019/11/30
  * description:
  */
 public class DevDataAutoCreate {

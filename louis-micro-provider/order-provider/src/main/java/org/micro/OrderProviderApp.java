@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 
 /**
  * @author John·Louis
- *  create at 2019/12/6
+ *  created at 2019/12/6
  * description:
  * 简单的作为资源服务功能来使用
  */

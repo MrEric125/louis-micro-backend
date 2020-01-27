@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @author John·Louis
- *  create at 2019/7/9
+ *  created at 2019/7/9
  * description:
  */
 public class LicenseWord {

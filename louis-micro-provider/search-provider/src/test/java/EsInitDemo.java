@@ -17,7 +17,7 @@ import java.net.UnknownHostException;
 
 /**
  * @author John·Louis
- *  create at 2019/7/9
+ *  created at 2019/7/9
  * description:
  *
  *  1.创建一个Settings 对象 相当于一个配置信息，主要配置集群信息
