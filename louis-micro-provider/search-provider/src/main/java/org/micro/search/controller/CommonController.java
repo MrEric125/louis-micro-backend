@@ -1,6 +1,6 @@
 package org.micro.provider.controller;
 
-import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.index.query.MatchAllQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
@@ -24,9 +24,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 /**
  * @author John·Louis

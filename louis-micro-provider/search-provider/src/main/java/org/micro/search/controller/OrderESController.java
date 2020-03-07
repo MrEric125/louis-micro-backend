@@ -1,11 +1,11 @@
-package org.micro.provider.controller;
+package org.micro.search.controller;
 
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryStringQueryBuilder;
 import org.micro.common.api.wrapper.MapperWrap;
 import org.micro.common.api.wrapper.Wrapper;
-import org.micro.provider.entity.OrderEs;
-import org.micro.provider.repository.OrderEsRepository;
+import org.micro.search.entity.OrderEs;
+import org.micro.search.repository.OrderEsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;

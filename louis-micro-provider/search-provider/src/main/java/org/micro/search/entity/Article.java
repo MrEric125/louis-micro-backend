@@ -1,4 +1,4 @@
-package org.micro.provider.entity;
+package org.micro.search.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
