@@ -33,6 +33,7 @@
         <module>security-provider</module>
         <module>order-provider</module>
         <module>search-provider</module>
+        <module>base-provider</module>
     </modules>
     <dependencies>
 

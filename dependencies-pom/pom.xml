@@ -10,6 +10,7 @@
 
     <properties>
         <!-- Commons -->
+        <swagger.version>1.5.20</swagger.version>
         <okhttp3.version>4.1.0</okhttp3.version>
         <feign-okhttp.version>10.3.0</feign-okhttp.version>
         <spring-boot.version>2.1.7.RELEASE</spring-boot.version>
@@ -48,6 +49,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
 
 
             <dependency>
@@ -179,6 +181,11 @@
                 <groupId>io.github.openfeign</groupId>
                 <artifactId>feign-okhttp</artifactId>
                 <version>${feign-okhttp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

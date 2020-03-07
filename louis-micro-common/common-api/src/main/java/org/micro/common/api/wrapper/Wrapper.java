@@ -12,10 +12,11 @@ import java.io.Serializable;
 /**
  * The class Wrapper.
  * 返回到首页的包装类
+ *
  * @param <T> the type parameter @author John·Louis
  */
 @Data
-@JsonInclude(value =  JsonInclude.Include.NON_NULL)
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class Wrapper<T> implements Serializable {
 
 	/**
@@ -23,10 +24,14 @@ public class Wrapper<T> implements Serializable {
 	 */
 	private static final long serialVersionUID = 4893280118017319089L;
 
+
+	private String host;
+
+
+
 	/**
 	 * 基本上成功就返回200<=code<300
 	 * 常用的错误提示码
-	 *
 	 */
 	private int code;
 
@@ -75,7 +80,6 @@ public class Wrapper<T> implements Serializable {
 	 * Sets the 编号 , 返回自身的引用.
 	 *
 	 * @param code the new 编号
-	 *
 	 * @return the wrapper
 	 */
 	private Wrapper<T> code(int code) {
@@ -87,7 +91,6 @@ public class Wrapper<T> implements Serializable {
 	 * Sets the 信息 , 返回自身的引用.
 	 *
 	 * @param message the new 信息
-	 *
 	 * @return the wrapper
 	 */
 	private Wrapper<T> message(String message) {
@@ -99,7 +102,6 @@ public class Wrapper<T> implements Serializable {
 	 * Sets the 结果数据 , 返回自身的引用.
 	 *
 	 * @param result the new 结果数据
-	 *
 	 * @return the wrapper
 	 */
 	public Wrapper<T> result(T result) {
