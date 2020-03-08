@@ -2,6 +2,7 @@ package org.micro;
 
 import org.louis.micro.MicroServiceClient;
 import org.springframework.boot.SpringApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * @author John·Louis
@@ -9,6 +10,7 @@ import org.springframework.boot.SpringApplication;
  * description:
  * 简单的作为资源服务功能来使用
  */
+@EnableJpaRepositories
 @MicroServiceClient
 public class OrderProviderApp {
 

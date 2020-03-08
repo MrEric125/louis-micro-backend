@@ -1,4 +1,4 @@
-package org.micro.backend.entity;
+package org.micro.backend.base.entity.todo;
 
 import java.util.Arrays;
 

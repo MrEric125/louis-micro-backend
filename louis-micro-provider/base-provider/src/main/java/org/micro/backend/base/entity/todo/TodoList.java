@@ -1,4 +1,4 @@
-package org.micro.backend.entity;
+package org.micro.backend.base.entity.todo;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -31,7 +31,7 @@ public class TodoList extends AbstractAuditable<Long> {
     private String todoTitle;
 
 
-    @Column(name = "todo_title")
+    @Column(name = "todo_description")
     private String description;
 
     /**

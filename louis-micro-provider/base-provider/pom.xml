@@ -13,15 +13,14 @@
 
     <dependencies>
         <dependency>
-            <artifactId>louis-micro-common</artifactId>
             <groupId>org.louis.micro</groupId>
+            <artifactId>common-core</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>org.louis.micro</groupId>
-            <artifactId>common-core</artifactId>
+            <artifactId>common-web</artifactId>
             <version>${revision}</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 

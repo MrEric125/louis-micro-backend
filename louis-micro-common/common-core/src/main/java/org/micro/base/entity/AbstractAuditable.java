@@ -38,10 +38,10 @@ public class AbstractAuditable<ID extends Serializable> extends BaseEntity<ID> {
     private Date createdDate;
 
     @Size(max = 50)
-    @Column(name = "last_modified_by", length = 50)
+    @Column(name = "modified_by", length = 50)
     private String lastModifiedBy;
 
-    @Column(name = "last_modified_date")
+    @Column(name = "modified_date")
     private Date lastModifiedDate;
 
 

@@ -1,13 +1,11 @@
-package org.micro.provider.controller;
+package org.micro.search.controller;
 
-import org.elasticsearch.index.query.MatchAllQueryBuilder;
+import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
-import org.elasticsearch.search.aggregations.AggregationBuilder;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.metrics.valuecount.ValueCountAggregationBuilder;
-import org.elasticsearch.search.aggregations.support.FieldContext;
 import org.micro.common.api.wrapper.MapperWrap;
 import org.micro.common.api.wrapper.Wrapper;
 import org.micro.provider.SearchConstant;
@@ -24,6 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 /**
  * @author John·Louis
