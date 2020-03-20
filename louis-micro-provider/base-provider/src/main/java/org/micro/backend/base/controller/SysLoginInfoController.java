@@ -20,8 +20,8 @@ import java.util.Date;
 public class SysLoginInfoController extends BaseWebController<SysLoginInfo, Long> {
 
 
-    @SuppressWarnings("unchecked")
     @Override
+    @SuppressWarnings("unchecked")
     protected SysLoginInfoService getService() {
         return getService(SysLoginInfoService.class);
     }

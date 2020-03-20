@@ -47,7 +47,7 @@ public class PageWrapMapper {
 	 * @return todo 这个地方不太好指定泛型类型
 	 */
 	@SuppressWarnings("unchecked")
-	protected <T> Wrapper<T> handlePageAndSortResult(Object t) {
+	public static  <T> Wrapper<T> handlePageAndSortResult(Object t) {
 		if (t instanceof Page) {
 			Page page = (Page) t;
 			List<SortInfo> sortInfos = new ArrayList<>();

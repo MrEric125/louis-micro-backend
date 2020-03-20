@@ -3,6 +3,7 @@ package org.micro.backend.base.entity.todo;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.micro.base.entity.AbstractAuditable;
+import sun.reflect.generics.reflectiveObjects.LazyReflectiveObjectGenerator;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,6 +24,8 @@ public class TodoList extends AbstractAuditable<Long> {
 
 
 
+    @NotNull
+    @Column(name = "user_id",nullable = false)
     private Long userId;
 
     @NotNull

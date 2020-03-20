@@ -1,6 +1,7 @@
 package org.micro.base.service.impl;
 
 import org.micro.base.Searchable;
+import org.micro.base.entity.LogicDeleteable;
 import org.micro.base.exception.UnAchievedException;
 import org.micro.base.repository.BaseRepository;
 import org.micro.base.service.IBaseWebService;
@@ -64,7 +65,12 @@ public abstract class BaseWebService<T extends BaseEntity<ID>,ID extends Seriali
 
     @Override
     public void delete(T t) {
-        baseRepository.delete(t);
+        if (t instanceof LogicDeleteable) {
+            ((LogicDeleteable) t).markDeleted();
+            baseRepository.save(t);
+        } else {
+            baseRepository.delete(t);
+        }
 
     }
 

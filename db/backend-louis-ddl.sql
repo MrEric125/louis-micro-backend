@@ -16,8 +16,7 @@ create table backend_todo_list
 -- auto-generated definition
 create table sys_login_info
 (
-    id                  bigint auto_increment
-        primary key,
+    id                  bigint auto_increment primary key,
     ip                  varchar(255) null comment 'ip地址',
     last_login          datetime     null comment '最近登录时间',
     user_id             bigint       null comment '用户id',
