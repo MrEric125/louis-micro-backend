@@ -1,0 +1,32 @@
+
+## Default Elasticsearch configuration from Elasticsearch base image.
+## https://github.com/elastic/elasticsearch/blob/master/distribution/docker/src/docker/config/elasticsearch.yml
+#
+# 是否为主节点
+node.master: true
+# 是否存储数据
+node.data: true
+#discovery.zen.minimum_master_nodes: 形成一个集群，有主节点资格并互相连接的节点的最小数目
+#集群名字
+cluster.name: "docker-cluster"
+network.host: 0.0.0.0
+
+#discovery.zen.ping.multicast.group: 用于多播请求的群组地址，默认是224.2.2.4
+
+#discovery.zen.ping.multicast.port: 用户多播通信的端口号，默认是54328
+
+#discovery.zen.ping.multicast.ttl: 多播请求被认为有效的时间,默认是3秒
+
+#discovery.zen.ping.multicast.address: Elasticsearch应该绑定的地址。默认为
+#  null，意味着Elasticsearch将尝试绑定到操作系统可见的所有网络接口
+
+#使用本地的网关
+#gateway.type: local
+
+## X-Pack settings
+## see https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-xpack.html
+#
+#xpack.license.self_generated.type: trial
+#xpack.security.enabled: true
+xpack.monitoring.collection.enabled: true
+

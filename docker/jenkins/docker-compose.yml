@@ -1,0 +1,13 @@
+version: "2"
+services:
+  jenkinsci:
+    image: jenkinsci/blueocean
+    container_name: jenkinsci/blueocean
+    privileged: true
+    ports:
+      - 8080:8080
+      - 50000:50000
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - /data:/var/jenkins_home

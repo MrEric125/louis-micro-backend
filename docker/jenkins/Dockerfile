@@ -1,0 +1,6 @@
+ARG JENKINS_VERSION
+
+FROM jenkins:${JENKINS_VERSION}
+
+USER root
+

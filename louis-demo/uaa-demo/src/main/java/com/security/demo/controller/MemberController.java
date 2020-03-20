@@ -1,6 +1,6 @@
 package com.security.demo.controller;
 
-import org.micro.common.api.wrapper.WrapMapper;
+import org.micro.common.api.wrapper.MapperWrap;
 import org.micro.common.api.wrapper.Wrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.provider.token.ConsumerTokenServices;
@@ -39,7 +39,7 @@ public class MemberController {
     @DeleteMapping(value = "/exit")
     public Wrapper revokeToken(String access_token) {
         boolean revokeToken = consumerTokenServices.revokeToken(access_token);
-        return WrapMapper.wrap(revokeToken);
+        return MapperWrap.wrap(revokeToken);
     }
 
 }

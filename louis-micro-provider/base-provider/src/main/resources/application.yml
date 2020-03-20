@@ -1,0 +1,7 @@
+#该模块作为后台的基本功能
+spring:
+  profiles:
+    active: dev
+server:
+  servlet:
+    context-path: /dev-api

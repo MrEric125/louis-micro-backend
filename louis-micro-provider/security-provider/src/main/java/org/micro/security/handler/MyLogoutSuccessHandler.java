@@ -1,7 +1,7 @@
 package org.micro.security.handler;
 
 import com.alibaba.fastjson.JSON;
-import org.micro.common.api.wrapper.WrapMapper;
+import org.micro.common.api.wrapper.MapperWrap;
 import org.micro.common.api.wrapper.Wrapper;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.Authentication;
@@ -20,7 +20,7 @@ public class MyLogoutSuccessHandler implements LogoutSuccessHandler {
     @Override
     public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
 
-        Wrapper result = WrapMapper.wrap(authentication.getPrincipal());
+        Wrapper result = MapperWrap.wrap(authentication.getPrincipal());
         httpServletResponse.setCharacterEncoding("utf-8");
         httpServletResponse.setContentType("application/json;charset=utf-8");
         httpServletResponse.getWriter().write(JSON.toJSONString(result));

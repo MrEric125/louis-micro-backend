@@ -12,16 +12,6 @@
 
     <artifactId>common-web</artifactId>
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>com.louis</groupId>-->
-<!--            <artifactId>louiscloud-common-web</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.louis</groupId>-->
-<!--            <artifactId>louiscloud-common-core</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.louis.micro</groupId>
             <artifactId>common-core</artifactId>

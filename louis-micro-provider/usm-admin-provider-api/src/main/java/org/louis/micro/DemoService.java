@@ -4,7 +4,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 /**
  * @author John·Louis
- * @date create in 2019/9/14
+ *  created at 2019/9/14
  * description:
  */
 @Path("/default")
