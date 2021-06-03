@@ -30,7 +30,7 @@
         <dubbo.version>2.7.3</dubbo.version>
         <zookeeper-version>3.4.6</zookeeper-version>
         <netty4_version>4.1.25.Final</netty4_version>
-        <resteasy_version>3.0.19.Final</resteasy_version>
+        <resteasy_version>4.5.7.Final</resteasy_version>
     </properties>
     <dependencies>
 
